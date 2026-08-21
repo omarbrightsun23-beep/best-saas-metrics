@@ -1,0 +1,6 @@
+{
+  "name": "Best SAAS Metrics",
+  "description": "Enterprise B2B SaaS CAC Payback Period & Unit Economics Audit Calculator with real-time financial math engine, 36-month cashflow trajectory graphs, and sector benchmarks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
