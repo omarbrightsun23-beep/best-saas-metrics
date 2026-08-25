@@ -19,3 +19,543 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                            navy: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SaaS Rule of 40 Calculator",
+      "url": "https://www.bestsaasmetrics.com/rule-of-40-calculator",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Interactive financial calculator for SaaS companies to evaluate the Rule of 40 metric using Revenue Growth and EBITDA or Free Cash Flow margins."
+    }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Top Header & Navigation -->
+    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center font-bold text-white shadow-lg shadow-emerald-500/20">
+                    BM
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-white tracking-tight group-hover:text-emerald-400 transition-colors">Best SaaS Metrics</span>
+                    <span class="hidden sm:inline-block text-xs text-slate-400 ml-2 font-mono border-l border-slate-700 pl-2">2026 Audit Edition</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="/" class="hover:text-white transition-colors">CAC Payback</a>
+                <a href="/rule-of-40-calculator" class="text-emerald-400 border-b-2 border-emerald-400 pb-0.5 font-semibold">Rule of 40</a>
+                <a href="#benchmarks" class="hover:text-white transition-colors">2026 Benchmarks</a>
+                <a href="#methodology" class="hover:text-white transition-colors">Formulas</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-md transition-all shadow-md shadow-emerald-500/10">
+                    Advisory Contact
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+        
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center text-xs text-slate-400 gap-2">
+            <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+            <span>/</span>
+            <a href="/" class="hover:text-emerald-400 transition-colors">SaaS Financial Calculators</a>
+            <span>/</span>
+            <span class="text-slate-200">Rule of 40 Calculator</span>
+        </nav>
+
+        <!-- Page Header / Hero -->
+        <div class="space-y-3 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Audited Institutional Framework (ASC 606 & VC Standards)
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+                SaaS Rule of 40 Calculator
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+                Determine if your subscription business achieves elite capital efficiency. Model trade-offs between year-over-year revenue expansion and operating margins against 2026 venture capital benchmarks.
+            </p>
+        </div>
+
+        <!-- Calculator Interactive Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left Side: Inputs Form (7 cols) -->
+            <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl relative overflow-hidden">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <h2 class="text-lg font-semibold text-white flex items-center gap-2">
+                        <span>Financial Assumptions</span>
+                    </h2>
+                    <button id="resetBtn" class="text-xs text-slate-400 hover:text-emerald-400 transition-colors font-medium">
+                        Reset Defaults
+                    </button>
+                </div>
+
+                <!-- Input 1: YoY Revenue Growth Rate -->
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center text-sm">
+                        <label for="growthInput" class="font-medium text-slate-200">
+                            Year-over-Year (YoY) Revenue Growth Rate
+                        </label>
+                        <div class="flex items-center gap-1">
+                            <input type="number" id="growthInput" value="45" step="1" min="-100" max="300" 
+                                class="w-24 bg-slate-800 border border-slate-700 rounded px-2.5 py-1 text-right font-mono text-emerald-400 font-bold focus:outline-none focus:border-emerald-500 text-sm">
+                            <span class="text-slate-400 font-mono">%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="growthSlider" min="-50" max="150" value="45" step="1" 
+                        class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+                    <div class="flex justify-between text-[11px] text-slate-500 font-mono">
+                        <span>-50%</span>
+                        <span>0%</span>
+                        <span>50% (Median Scale)</span>
+                        <span>100%+</span>
+                    </div>
+                </div>
+
+                <!-- Input 2: Profitability Margin -->
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center text-sm">
+                        <div class="space-y-0.5">
+                            <label for="marginInput" class="font-medium text-slate-200">
+                                Profitability / Free Cash Flow Margin
+                            </label>
+                            <div class="flex items-center gap-2 text-xs text-slate-400">
+                                <label class="cursor-pointer flex items-center gap-1">
+                                    <input type="radio" name="marginType" value="fcf" checked class="accent-emerald-500"> FCF
+                                </label>
+                                <label class="cursor-pointer flex items-center gap-1">
+                                    <input type="radio" name="marginType" value="ebitda" class="accent-emerald-500"> EBITDA
+                                </label>
+                                <label class="cursor-pointer flex items-center gap-1">
+                                    <input type="radio" name="marginType" value="operating" class="accent-emerald-500"> Operating
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <input type="number" id="marginInput" value="15" step="1" min="-100" max="100" 
+                                class="w-24 bg-slate-800 border border-slate-700 rounded px-2.5 py-1 text-right font-mono text-teal-400 font-bold focus:outline-none focus:border-teal-500 text-sm">
+                            <span class="text-slate-400 font-mono">%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="marginSlider" min="-50" max="60" value="15" step="1" 
+                        class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-teal-500">
+                    <div class="flex justify-between text-[11px] text-slate-500 font-mono">
+                        <span>-50% (Heavy Burn)</span>
+                        <span>0% (Breakeven)</span>
+                        <span>+30% (High Margin)</span>
+                    </div>
+                </div>
+
+                <!-- Input 3: Current ARR -->
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center text-sm">
+                        <label for="arrInput" class="font-medium text-slate-200">
+                            Current Annual Recurring Revenue (ARR)
+                        </label>
+                        <div class="flex items-center gap-1">
+                            <span class="text-slate-400 font-mono">$</span>
+                            <input type="text" id="arrInput" value="10,000,000" 
+                                class="w-32 bg-slate-800 border border-slate-700 rounded px-2.5 py-1 text-right font-mono text-slate-100 font-bold focus:outline-none focus:border-emerald-500 text-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Mathematical Substitution Formula Box -->
+                <div class="bg-slate-950/80 border border-slate-800/80 rounded-xl p-4 space-y-2">
+                    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                        Live Mathematical Calculation:
+                    </div>
+                    <div class="font-mono text-xs sm:text-sm text-slate-300 flex flex-wrap items-center gap-2">
+                        <span>Rule of 40 =</span>
+                        <span class="text-emerald-400 font-bold" id="formulaGrowth">45%</span>
+                        <span>(Growth) +</span>
+                        <span class="text-teal-400 font-bold" id="formulaMargin">15%</span>
+                        <span>(Margin) =</span>
+                        <span class="text-white bg-emerald-500/20 px-2 py-0.5 rounded font-bold text-base" id="formulaResult">60.0%</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Side: Results & Benchmark Scorecard (5 cols) -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Main Score Card -->
+                <div id="scoreContainer" class="bg-slate-900 border-2 border-emerald-500/50 rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl relative">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Rule of 40 Score</span>
+                        <span id="badgeVerdict" class="px-3 py-1 text-xs font-bold rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                            Elite (Top Quartile)
+                        </span>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div class="text-5xl sm:text-6xl font-black font-mono text-white tracking-tight" id="scoreDisplay">
+                            60.0%
+                        </div>
+                        <p class="text-xs text-slate-400" id="subVerdict">
+                            Exceeds standard 40% threshold by <span class="text-emerald-400 font-bold">+20.0%</span>
+                        </p>
+                    </div>
+
+                    <!-- Key Drivers Breakdown -->
+                    <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-4 text-xs font-mono">
+                        <div class="space-y-1">
+                            <span class="text-slate-500">Growth Contribution</span>
+                            <div class="text-base font-bold text-emerald-400" id="growthContrib">75.0% of Score</div>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-slate-500">Margin Contribution</span>
+                            <div class="text-base font-bold text-teal-400" id="marginContrib">25.0% of Score</div>
+                        </div>
+                    </div>
+
+                    <!-- Valuation Impact Benchmark -->
+                    <div class="bg-slate-950/60 rounded-xl p-4 border border-slate-800 space-y-2 text-xs">
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-400">Est. EV/ARR Valuation Multiple:</span>
+                            <span class="text-emerald-400 font-bold font-mono text-sm" id="valuationMultiple">8.5x – 12.0x ARR</span>
+                        </div>
+                        <div class="flex justify-between items-center text-slate-400">
+                            <span>Market Premium vs Median:</span>
+                            <span class="text-slate-200 font-bold font-mono" id="multiplePremium">+40% Valuation Premium</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3 pt-2">
+                        <button onclick="window.print()" class="flex-1 py-2.5 px-4 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-2">
+                            Export PDF / Print
+                        </button>
+                        <button id="copyLinkBtn" class="flex-1 py-2.5 px-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-2">
+                            Share Score
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2D Visual Chart Box -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <h3 class="text-sm font-semibold text-slate-200">Growth vs Margin Composition</h3>
+                    <div class="h-44">
+                        <canvas id="scoreChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 2026 Industry Benchmarks Table Section -->
+        <section id="benchmarks" class="space-y-6 pt-6 border-t border-slate-800">
+            <div class="space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                    2026 SaaS Rule of 40 Industry Benchmarks
+                </h2>
+                <p class="text-slate-400 text-sm max-w-3xl">
+                    Data compiled from annual public filings, Bessemer Venture Partners (State of the Cloud), and KeyBanc SaaS survey benchmarks.
+                </p>
+            </div>
+
+            <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900">
+                <table class="w-full text-left text-xs sm:text-sm text-slate-300">
+                    <thead class="bg-slate-950 text-slate-400 uppercase text-[11px] font-semibold border-b border-slate-800">
+                        <tr>
+                            <th class="px-6 py-4">SaaS ARR Tier</th>
+                            <th class="px-6 py-4">Bottom Quartile (&lt;25th)</th>
+                            <th class="px-6 py-4">Median (50th %ile)</th>
+                            <th class="px-6 py-4">Top Quartile (&gt;75th)</th>
+                            <th class="px-6 py-4">Primary Growth Engine</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800 font-mono">
+                        <tr class="hover:bg-slate-800/50">
+                            <td class="px-6 py-4 font-bold text-white font-sans">Early ($1M - $10M ARR)</td>
+                            <td class="px-6 py-4 text-rose-400">&lt; 20%</td>
+                            <td class="px-6 py-4 text-amber-400">35% - 42%</td>
+                            <td class="px-6 py-4 text-emerald-400 font-bold">&gt; 55%</td>
+                            <td class="px-6 py-4 font-sans text-slate-400">Pure Revenue Growth (&gt;60%)</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/50">
+                            <td class="px-6 py-4 font-bold text-white font-sans">Growth ($10M - $50M ARR)</td>
+                            <td class="px-6 py-4 text-rose-400">&lt; 25%</td>
+                            <td class="px-6 py-4 text-amber-400">38% - 45%</td>
+                            <td class="px-6 py-4 text-emerald-400 font-bold">&gt; 50%</td>
+                            <td class="px-6 py-4 font-sans text-slate-400">Balanced (35% Growth + 10% FCF)</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/50">
+                            <td class="px-6 py-4 font-bold text-white font-sans">Scale ($50M+ ARR)</td>
+                            <td class="px-6 py-4 text-rose-400">&lt; 30%</td>
+                            <td class="px-6 py-4 text-amber-400">40% - 48%</td>
+                            <td class="px-6 py-4 text-emerald-400 font-bold">&gt; 52%</td>
+                            <td class="px-6 py-4 font-sans text-slate-400">Cash Generation (20% Growth + 25% FCF)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Detailed Methodology & Guide -->
+        <section id="methodology" class="space-y-6 pt-6 border-t border-slate-800">
+            <div class="space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                    Understanding the Rule of 40 in SaaS Valuation
+                </h2>
+                <p class="text-slate-400 text-sm max-w-3xl leading-relaxed">
+                    The Rule of 40 is the premier venture capital heuristic used to evaluate the operational health and capital efficiency of subscription software companies.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-3">
+                    <div class="w-8 h-8 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">1</div>
+                    <h3 class="font-bold text-white text-base">Growth at All Costs vs. Efficiency</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        In high interest-rate environments, public and private software valuations reward sustainable profitability just as heavily as top-line revenue acceleration.
+                    </p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-3">
+                    <div class="w-8 h-8 rounded bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold">2</div>
+                    <h3 class="font-bold text-white text-base">FCF vs EBITDA Margin Nuance</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Institutional buyers prefer <strong>Free Cash Flow (FCF) Margin</strong> because it captures working capital swings and upfront multi-year annual contract prepayments.
+                    </p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-3">
+                    <div class="w-8 h-8 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">3</div>
+                    <h3 class="font-bold text-white text-base">Valuation Multiple Impact</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Companies exceeding the Rule of 40 trade at a historical 2.5x EV/Revenue premium over peers failing to clear the benchmark.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Calculators Hub Links -->
+        <section class="space-y-6 pt-6 border-t border-slate-800">
+            <h2 class="text-xl font-bold text-white">Explore Related SaaS Metrics Calculators</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+                <a href="/" class="p-4 bg-slate-900 hover:bg-slate-800/80 border border-slate-800 rounded-xl transition-all block group">
+                    <div class="font-bold text-white group-hover:text-emerald-400 transition-colors">CAC Payback Period Calculator</div>
+                    <div class="text-xs text-slate-400 mt-1">ASC 606 adjusted customer acquisition cash recovery timeline.</div>
+                </a>
+                <a href="/ltv-calculator" class="p-4 bg-slate-900 hover:bg-slate-800/80 border border-slate-800 rounded-xl transition-all block group">
+                    <div class="font-bold text-white group-hover:text-emerald-400 transition-colors">Customer Lifetime Value (LTV)</div>
+                    <div class="text-xs text-slate-400 mt-1">Forecast net cumulative gross margin contribution per logo.</div>
+                </a>
+                <a href="/burn-multiple-calculator" class="p-4 bg-slate-900 hover:bg-slate-800/80 border border-slate-800 rounded-xl transition-all block group">
+                    <div class="font-bold text-white group-hover:text-emerald-400 transition-colors">SaaS Burn Multiple Calculator</div>
+                    <div class="text-xs text-slate-400 mt-1">Evaluate net burn against net new ARR added per quarter.</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section id="faq" class="space-y-6 pt-6 border-t border-slate-800">
+            <h2 class="text-2xl font-bold text-white">Frequently Asked Questions</h2>
+            <div class="space-y-4 max-w-4xl text-sm">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-2">
+                    <h3 class="font-bold text-white">What is considered a good Rule of 40 score?</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        A score of 40% is the baseline passing grade. Scores between 40% and 50% are healthy, while scores above 50% place a company in the top decile of venture-backed software businesses.
+                    </p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-2">
+                    <h3 class="font-bold text-white">Should early-stage startups use the Rule of 40?</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        The Rule of 40 is most applicable once a SaaS company reaches product-market fit (typically $2M–$5M+ ARR). Below $2M ARR, revenue growth should be the overwhelming priority over margin balance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-12 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 Best SaaS Metrics. All Rights Reserved. Engineered for Institutional Corporate Finance.
+            </div>
+            <div class="flex gap-4">
+                <a href="/" class="hover:text-slate-400">Home</a>
+                <a href="/rule-of-40-calculator" class="hover:text-slate-400">Rule of 40</a>
+                <a href="#contact" class="hover:text-slate-400">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-Side Reactive JavaScript -->
+    <script>
+        const growthInput = document.getElementById('growthInput');
+        const growthSlider = document.getElementById('growthSlider');
+        const marginInput = document.getElementById('marginInput');
+        const marginSlider = document.getElementById('marginSlider');
+        const resetBtn = document.getElementById('resetBtn');
+        const copyLinkBtn = document.getElementById('copyLinkBtn');
+
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const badgeVerdict = document.getElementById('badgeVerdict');
+        const subVerdict = document.getElementById('subVerdict');
+        const formulaGrowth = document.getElementById('formulaGrowth');
+        const formulaMargin = document.getElementById('formulaMargin');
+        const formulaResult = document.getElementById('formulaResult');
+        const growthContrib = document.getElementById('growthContrib');
+        const marginContrib = document.getElementById('marginContrib');
+        const valuationMultiple = document.getElementById('valuationMultiple');
+        const multiplePremium = document.getElementById('multiplePremium');
+
+        // Sync Slider & Number Inputs
+        growthSlider.addEventListener('input', (e) => {
+            growthInput.value = e.target.value;
+            calculate();
+        });
+        growthInput.addEventListener('input', (e) => {
+            growthSlider.value = e.target.value;
+            calculate();
+        });
+
+        marginSlider.addEventListener('input', (e) => {
+            marginInput.value = e.target.value;
+            calculate();
+        });
+        marginInput.addEventListener('input', (e) => {
+            marginSlider.value = e.target.value;
+            calculate();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            growthInput.value = 45;
+            growthSlider.value = 45;
+            marginInput.value = 15;
+            marginSlider.value = 15;
+            calculate();
+        });
+
+        copyLinkBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(window.location.href);
+            copyLinkBtn.innerText = "Link Copied!";
+            setTimeout(() => { copyLinkBtn.innerText = "Share Score"; }, 2000);
+        });
+
+        // Initialize Chart.js
+        const ctx = document.getElementById('scoreChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Your Score', 'Median Benchmark', 'Top Decile'],
+                datasets: [{
+                    label: 'Rule of 40 Score (%)',
+                    data: [60, 42, 55],
+                    backgroundColor: ['#10b981', '#64748b', '#065f46'],
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#1e293b' },
+                        ticks: { color: '#94a3b8', font: { family: 'monospace' } }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#cbd5e1' }
+                    }
+                }
+            }
+        });
+
+        function calculate() {
+            const growth = parseFloat(growthInput.value) || 0;
+            const margin = parseFloat(marginInput.value) || 0;
+            const score = growth + margin;
+
+            scoreDisplay.textContent = score.toFixed(1) + '%';
+            formulaGrowth.textContent = growth + '%';
+            formulaMargin.textContent = margin + '%';
+            formulaResult.textContent = score.toFixed(1) + '%';
+
+            // Verdict & Styling
+            if (score >= 50) {
+                badgeVerdict.textContent = "Elite (Top Decile > 50%)";
+                badgeVerdict.className = "px-3 py-1 text-xs font-bold rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+                subVerdict.innerHTML = `Exceeds 40% threshold by <span class="text-emerald-400 font-bold">+${(score - 40).toFixed(1)}%</span>`;
+                valuationMultiple.textContent = "10.0x – 14.0x ARR";
+                multiplePremium.textContent = "+45% Valuation Premium";
+            } else if (score >= 40) {
+                badgeVerdict.textContent = "Passing / Healthy (40% - 50%)";
+                badgeVerdict.className = "px-3 py-1 text-xs font-bold rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30";
+                subVerdict.innerHTML = `Healthy capital efficiency (+${(score - 40).toFixed(1)}% over 40%)`;
+                valuationMultiple.textContent = "7.0x – 9.5x ARR";
+                multiplePremium.textContent = "Baseline Market Multiplier";
+            } else {
+                badgeVerdict.textContent = "Underperforming (< 40%)";
+                badgeVerdict.className = "px-3 py-1 text-xs font-bold rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30";
+                subVerdict.innerHTML = `<span class="text-rose-400 font-bold">${(40 - score).toFixed(1)}%</span> below 40% threshold`;
+                valuationMultiple.textContent = "3.5x – 6.0x ARR";
+                multiplePremium.textContent = "-30% Valuation Discount";
+            }
+
+            // Percentage contribution
+            if (score > 0) {
+                const gPct = Math.max(0, Math.min(100, (growth / score) * 100));
+                const mPct = 100 - gPct;
+                growthContrib.textContent = gPct.toFixed(0) + '% of Score';
+                marginContrib.textContent = mPct.toFixed(0) + '% of Score';
+            }
+
+            // Update Chart
+            chart.data.datasets[0].data[0] = score;
+            chart.data.datasets[0].backgroundColor[0] = score >= 40 ? '#10b981' : '#f43f5e';
+            chart.update();
+        }
+
+        // Run calculation on load
+        calculate();
+    </script>
+</body>
+</html>
