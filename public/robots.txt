@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://bestsaasmetrics.com/sitemap.xml
+
+Sitemap: https://www.bestsaasmetrics.com/sitemap.xml
