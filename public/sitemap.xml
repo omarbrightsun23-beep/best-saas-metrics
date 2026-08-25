@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core Pages & Calculators -->
+  <!-- 1. Core Homepage (CAC Payback Engine) -->
   <url>
     <loc>https://www.bestsaasmetrics.com/</loc>
     <lastmod>2026-08-25</lastmod>
@@ -9,6 +9,7 @@
     <priority>1.00</priority>
   </url>
 
+  <!-- 2. Standalone Rule of 40 Calculator -->
   <url>
     <loc>https://www.bestsaasmetrics.com/rule-of-40-calculator</loc>
     <lastmod>2026-08-25</lastmod>
@@ -16,7 +17,36 @@
     <priority>0.90</priority>
   </url>
 
-  <!-- Legal, Contact & Compliance Pages -->
+  <!-- 3. SaaS Industry Models & Benchmarks -->
+  <url>
+    <loc>https://www.bestsaasmetrics.com/enterprise-b2b-saas</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bestsaasmetrics.com/bootstrapped-micro-saas</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bestsaasmetrics.com/plg-self-serve-saas</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bestsaasmetrics.com/fintech-payments-saas</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 4. Legal, Sitemap & Support Pages -->
   <url>
     <loc>https://www.bestsaasmetrics.com/terms-and-conditions</loc>
     <lastmod>2026-08-25</lastmod>
@@ -33,6 +63,13 @@
 
   <url>
     <loc>https://www.bestsaasmetrics.com/disclaimer</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bestsaasmetrics.com/sitemap</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
