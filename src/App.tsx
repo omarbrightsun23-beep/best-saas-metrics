@@ -14,7 +14,6 @@ import AuthorTrustBlock from './components/AuthorTrustBlock';
 import CitationSection from './components/CitationSection';
 import SchemaJsonLd from './components/SchemaJsonLd';
 import CompareScenarioModal from './components/CompareScenarioModal';
-import VercelConfigModal from './components/VercelConfigModal';
 import LegalAndStaticPagesModal, { PageTabType } from './components/LegalAndStaticPagesModal';
 import Toast, { ToastMessage } from './components/Toast';
 import Footer from './components/Footer';
@@ -66,7 +65,6 @@ export default function App() {
 
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
   const [isCompareOpen, setIsCompareOpen] = useState(false);
-  const [isVercelModalOpen, setIsVercelModalOpen] = useState(false);
   const [activePageModal, setActivePageModal] = useState<PageTabType | null>(() => {
     if (typeof window !== 'undefined') {
       const hash = window.location.hash.toLowerCase();
@@ -190,8 +188,6 @@ export default function App() {
       />
 
       {/* Left & Right Ultra-Wide Desktop Gutter Skyscraper Ads */}
-      <AdBannerSlot slotId="desktop-gutter-skyscraper-left" format="skyscraper-left" />
-      <AdBannerSlot slotId="desktop-gutter-skyscraper-right" format="skyscraper-right" />
 
       {/* Hero Section */}
       <HeroSection selectedNiche={selectedNiche} onSelectNiche={handleSelectNiche} />
@@ -205,7 +201,6 @@ export default function App() {
           selectedNiche={selectedNiche}
           onAddToast={addToast}
           onOpenCompare={() => setIsCompareOpen(true)}
-          onOpenVercelConfig={() => setIsVercelModalOpen(true)}
         />
 
         {/* Two-Column Interactive Dashboard */}
@@ -272,11 +267,6 @@ export default function App() {
         }}
       />
 
-      {/* Vercel SPA Routing Configuration Modal */}
-      <VercelConfigModal
-        isOpen={isVercelModalOpen}
-        onClose={() => setIsVercelModalOpen(false)}
-      />
 
       {/* Mandatory Pages Modal (Terms & Conditions, Privacy Policy, Contact Us, Site Map) */}
       <LegalAndStaticPagesModal

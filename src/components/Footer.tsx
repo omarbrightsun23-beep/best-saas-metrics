@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, ExternalLink } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import { SubNicheData } from '../types';
 import { SUB_NICHES } from '../data/niches';
 import Logo from './Logo';
@@ -110,16 +110,7 @@ export default function Footer({ onSelectNiche }: FooterProps = {}) {
                   Academic &amp; Benchmark Citations
                 </Link>
               </li>
-              <li className="pt-1 border-t border-[#132817]">
-                <a
-                  href="/project.zip"
-                  download="bestsaasmetrics-project.zip"
-                  className="text-emerald-400 hover:text-emerald-300 transition font-semibold inline-flex items-center gap-1.5"
-                >
-                  <ExternalLink className="w-3 h-3" />
-                  <span>Download Project ZIP</span>
-                </a>
-              </li>
+
             </ul>
           </div>
         </div>

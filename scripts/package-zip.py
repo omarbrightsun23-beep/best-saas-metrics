@@ -2,7 +2,7 @@ import os
 import zipfile
 
 files = [
-    'metadata.json', '.env.example', '.gitignore', 'package.json',
+    'vercel.json', 'metadata.json', '.env.example', '.gitignore', 'package.json',
     'tsconfig.json', 'vite.config.ts', 'next.config.mjs', 'postcss.config.mjs',
     'server.ts', 'index.html', 'scripts/build-standalone.mjs', 'scripts/start-dev.mjs',
     'scripts/package-zip.py', 'src/index.css', 'src/types.ts', 'src/utils/financialMath.ts',

@@ -13,7 +13,6 @@ import EditorialNicheContent from './EditorialNicheContent';
 import AuthorTrustBlock from './AuthorTrustBlock';
 import CitationSection from './CitationSection';
 import CompareScenarioModal from './CompareScenarioModal';
-import VercelConfigModal from './VercelConfigModal';
 import LegalAndStaticPagesModal, { PageTabType } from './LegalAndStaticPagesModal';
 import Toast, { ToastMessage } from './Toast';
 import Footer from './Footer';
@@ -88,7 +87,6 @@ export default function SaaSCalculator({
 
   // Modals & Navigation state
   const [isCompareOpen, setIsCompareOpen] = useState(false);
-  const [isVercelModalOpen, setIsVercelModalOpen] = useState(false);
   const [activePageModal, setActivePageModal] = useState<PageTabType | null>(null);
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
@@ -193,9 +191,6 @@ export default function SaaSCalculator({
         onOpenPage={handleOpenPageModal}
       />
 
-      {/* Ultra-Wide Desktop Gutter Skyscraper Ads */}
-      <AdBannerSlot slotId="desktop-gutter-skyscraper-left" format="skyscraper-left" />
-      <AdBannerSlot slotId="desktop-gutter-skyscraper-right" format="skyscraper-right" />
 
       {/* Hero Section */}
       <HeroSection selectedNiche={selectedNiche} onSelectNiche={handleSelectNiche} />
@@ -209,7 +204,6 @@ export default function SaaSCalculator({
           selectedNiche={selectedNiche}
           onAddToast={addToast}
           onOpenCompare={() => setIsCompareOpen(true)}
-          onOpenVercelConfig={() => setIsVercelModalOpen(true)}
         />
 
         {/* Two-Column Interactive Dashboard */}
@@ -273,11 +267,6 @@ export default function SaaSCalculator({
         }}
       />
 
-      {/* Vercel Configuration Modal */}
-      <VercelConfigModal
-        isOpen={isVercelModalOpen}
-        onClose={() => setIsVercelModalOpen(false)}
-      />
 
       {/* Mandatory Pages Modal */}
       <LegalAndStaticPagesModal

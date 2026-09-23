@@ -7,8 +7,6 @@ import {
   BookmarkCheck,
   Check,
   GitCompare,
-  FolderArchive,
-  FileCode,
 } from 'lucide-react';
 import { ComputedMetrics, FinancialInputs, SubNicheData } from '../types';
 import { generateAuditPdf } from '../utils/pdfExport';
@@ -20,7 +18,6 @@ interface UtilityActionsProps {
   selectedNiche: SubNicheData;
   onAddToast: (toast: Omit<ToastMessage, 'id'>) => void;
   onOpenCompare: () => void;
-  onOpenVercelConfig?: () => void;
 }
 
 export default function UtilityActions({
@@ -29,7 +26,6 @@ export default function UtilityActions({
   selectedNiche,
   onAddToast,
   onOpenCompare,
-  onOpenVercelConfig,
 }: UtilityActionsProps) {
   const [isExportingPdf, setIsExportingPdf] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
@@ -125,30 +121,6 @@ export default function UtilityActions({
           <span>Compare Scenario</span>
         </button>
 
-        {/* Download Complete Project ZIP */}
-        <a
-          href="/project.zip"
-          download="bestsaasmetrics-project.zip"
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-[#eef8ed] text-slate-700 hover:text-emerald-900 text-xs font-semibold border border-slate-200 hover:border-[#d2edd0] transition cursor-pointer"
-          title="Download Complete Project Structure as ZIP (with vercel.json)"
-        >
-          <FolderArchive className="w-3.5 h-3.5 text-[#15803d]" />
-          <span>Project ZIP</span>
-        </a>
-
-        {/* Vercel JSON routing config */}
-        {onOpenVercelConfig && (
-          <button
-            type="button"
-            onClick={onOpenVercelConfig}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-[#eef8ed] text-slate-700 hover:text-emerald-900 text-xs font-semibold border border-slate-200 hover:border-[#d2edd0] transition cursor-pointer"
-            title="View vercel.json SPA rewrite configuration"
-          >
-            <FileCode className="w-3.5 h-3.5 text-[#15803d]" />
-            <span>vercel.json</span>
-          </button>
-        )}
-
         <button
           type="button"
           onClick={handleSaveModel}
@@ -157,6 +129,7 @@ export default function UtilityActions({
           {isSaved ? <Check className="w-3.5 h-3.5 text-[#15803d]" /> : <BookmarkCheck className="w-3.5 h-3.5 text-slate-600" />}
           <span>{isSaved ? 'Saved' : 'Save'}</span>
         </button>
+
         <button
           type="button"
           onClick={handleShareLink}
@@ -165,6 +138,7 @@ export default function UtilityActions({
           {isCopied ? <Check className="w-3.5 h-3.5 text-[#15803d]" /> : <Share2 className="w-3.5 h-3.5 text-slate-600" />}
           <span>{isCopied ? 'Link Copied' : 'Share'}</span>
         </button>
+
         <button
           type="button"
           onClick={handleExportPdf}

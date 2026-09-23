@@ -51,19 +51,6 @@ export default function HeroSection({ selectedNiche, onSelectNiche }: HeroSectio
             <ChevronRight className="w-3 h-3 text-slate-400" />
             <span className="text-[#15803d] font-bold">{selectedNiche.name}</span>
           </nav>
-          <div className="flex items-center gap-2 text-[11px] text-slate-600">
-            <span className="text-slate-400 font-mono text-[10px] uppercase tracking-wider">
-              Data Calibration:
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-white border border-[#d2edd0] text-emerald-900 text-[10px] font-bold shadow-2xs">
-              <Target className="w-3 h-3 text-[#15803d]" />
-              {selectedNiche.benchmarkContext.topQuartilePayback} Top-Quartile Target
-            </span>
-            <span className="hidden md:inline text-slate-300">·</span>
-            <span className="hidden md:inline text-[11px] text-slate-500 font-medium">
-              Bessemer &amp; OpenView Benchmarks
-            </span>
-          </div>
         </div>
 
         {/* Hero Title and Description Grid */}
