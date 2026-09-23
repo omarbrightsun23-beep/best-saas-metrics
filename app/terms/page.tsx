@@ -17,7 +17,7 @@ export default function TermsPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col">
-      <HeaderNav selectedNiche={defaultNiche} onSelectNiche={() => {}} onOpenPage={() => {}} />
+      <HeaderNav />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 space-y-8">
         <div className="border-b border-slate-200 pb-5">
           <nav className="text-xs text-slate-500 mb-2">
@@ -44,7 +44,7 @@ export default function TermsPage() {
           </p>
         </section>
       </main>
-      <Footer onSelectNiche={() => {}} onOpenPage={() => {}} />
+      <Footer />
     </div>
   );
 }

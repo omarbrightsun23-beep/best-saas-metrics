@@ -107,7 +107,13 @@ export default function HeaderNav({ selectedNiche, onSelectNiche }: HeaderNavPro
               value={selectedNiche.slug}
               onChange={(e) => {
                 const found = SUB_NICHES.find((n) => n.slug === e.target.value);
-                if (found) onSelectNiche(found);
+                if (found) {
+                  if (onSelectNiche) {
+                    onSelectNiche(found);
+                  } else if (typeof window !== 'undefined') {
+                    window.location.href = `/${found.slug}`;
+                  }
+                }
               }}
               className="bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#15803d]/30 cursor-pointer max-w-[140px] sm:max-w-none transition-all shadow-2xs"
               aria-label="Select SaaS Industry Niche Preset"

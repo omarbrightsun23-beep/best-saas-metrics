@@ -9,8 +9,8 @@ import Logo from './Logo';
 import { PageTabType } from './LegalAndStaticPagesModal';
 
 interface FooterProps {
-  onSelectNiche: (niche: SubNicheData) => void;
-  onOpenPage: (page: PageTabType) => void;
+  onSelectNiche?: (niche: SubNicheData) => void;
+  onOpenPage?: (page: PageTabType) => void;
 }
 
 export default function Footer({ onSelectNiche }: FooterProps) {
