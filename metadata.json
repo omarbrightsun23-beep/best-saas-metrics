@@ -1,8 +1,0 @@
-{
-  "name": "Best SaaS Metrics",
-  "description": "B2B SaaS CAC Payback Period & Unit Economics Calculator with gross margin-adjusted projections and venture capital benchmarks.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
