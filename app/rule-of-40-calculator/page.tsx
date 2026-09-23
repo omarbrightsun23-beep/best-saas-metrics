@@ -23,7 +23,7 @@ export default function RuleOf40CalculatorPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col">
-      <HeaderNav />
+      <HeaderNav selectedNiche={defaultNiche} />
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1 w-full">
         <nav className="flex items-center gap-1.5 text-xs text-slate-500">

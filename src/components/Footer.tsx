@@ -13,7 +13,7 @@ interface FooterProps {
   onOpenPage?: (page: PageTabType) => void;
 }
 
-export default function Footer({ onSelectNiche }: FooterProps) {
+export default function Footer({ onSelectNiche }: FooterProps = {}) {
   return (
     <footer id="site-footer" className="mt-16 border-t border-[#132817] bg-[#061208] py-12 text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -38,16 +38,18 @@ export default function Footer({ onSelectNiche }: FooterProps) {
             <ul className="space-y-1.5 text-[11px]">
               {SUB_NICHES.map((n) => (
                 <li key={n.slug}>
-                  <a
+                  <Link
                     href={`/${n.slug}`}
                     onClick={(e) => {
-                      e.preventDefault();
-                      onSelectNiche(n);
+                      if (onSelectNiche) {
+                        e.preventDefault();
+                        onSelectNiche(n);
+                      }
                     }}
                     className="text-slate-400 hover:text-white transition font-medium cursor-pointer text-left block"
                   >
                     {n.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -89,24 +91,24 @@ export default function Footer({ onSelectNiche }: FooterProps) {
             </div>
             <ul className="space-y-1.5 text-[11px]">
               <li>
-                <a href="#semantic-math-glossary-section" className="text-slate-400 hover:text-white transition font-medium">
+                <Link href="/#semantic-math-glossary-section" className="text-slate-400 hover:text-white transition font-medium">
                   Unit Economics Math &amp; Formulas
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#trajectory-chart-container" className="text-slate-400 hover:text-white transition font-medium">
+                <Link href="/#trajectory-chart-container" className="text-slate-400 hover:text-white transition font-medium">
                   Cohort Churn Decay Models
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#author-eeat-trust-block" className="text-slate-400 hover:text-white transition font-medium">
+                <Link href="/#author-eeat-trust-block" className="text-slate-400 hover:text-white transition font-medium">
                   Editorial Methodology &amp; Sources
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#citation-section" className="text-slate-400 hover:text-white transition font-medium">
+                <Link href="/#citation-section" className="text-slate-400 hover:text-white transition font-medium">
                   Academic &amp; Benchmark Citations
-                </a>
+                </Link>
               </li>
               <li className="pt-1 border-t border-[#132817]">
                 <a
