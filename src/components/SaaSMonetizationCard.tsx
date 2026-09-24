@@ -43,15 +43,15 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
     return (
       <div
         id="monetization-card-enterprise"
-        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#eef8ed] via-[#f4faf2] to-white border border-[#d2edd0] p-6 shadow-xs transition duration-200"
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#EEF2FF] via-[#f4faf2] to-white border border-[#E0E7FF] p-6 shadow-xs transition duration-200"
       >
         <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-[#15803d] text-white shadow-xs">
+            <div className="p-2 rounded-xl bg-[#4F46E5] text-white shadow-xs">
               <Building2 className="w-4 h-4" />
             </div>
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#15803d]">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#4F46E5]">
                 Recommended Enterprise Solution
               </span>
               <h4 className="text-base font-black text-slate-900">
@@ -59,7 +59,7 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
               </h4>
             </div>
           </div>
-          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-white text-emerald-950 border border-[#d2edd0] shadow-xs">
+          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-white text-indigo-950 border border-[#E0E7FF] shadow-xs">
             <Zap className="w-3.5 h-3.5 text-amber-500" />
             <span>High CAC Detected (${inputs.cac.toLocaleString()})</span>
           </span>
@@ -75,37 +75,37 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
             href="https://www.apollo.io"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
+            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
           >
             <div>
-              <div className="text-xs font-bold text-slate-900 group-hover:text-[#15803d]">Apollo.io</div>
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5]">Apollo.io</div>
               <div className="text-[10px] text-slate-500">275M+ verified contacts &amp; sequences</div>
             </div>
-            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#15803d]" />
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#4F46E5]" />
           </a>
           <a
             href="https://www.zoominfo.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
+            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
           >
             <div>
-              <div className="text-xs font-bold text-slate-900 group-hover:text-[#15803d]">ZoomInfo</div>
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5]">ZoomInfo</div>
               <div className="text-[10px] text-slate-500">Enterprise org charts &amp; intent signals</div>
             </div>
-            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#15803d]" />
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#4F46E5]" />
           </a>
           <a
             href="https://www.clay.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
+            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
           >
             <div>
-              <div className="text-xs font-bold text-slate-900 group-hover:text-[#15803d]">Clay</div>
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5]">Clay</div>
               <div className="text-[10px] text-slate-500">100+ enrichment providers in 1 sheet</div>
             </div>
-            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#15803d]" />
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#4F46E5]" />
           </a>
         </div>
       </div>
@@ -117,15 +117,15 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
     return (
       <div
         id="monetization-card-billing"
-        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#eef8ed] via-[#f4faf2] to-white border border-[#d2edd0] p-6 shadow-xs transition duration-200"
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#EEF2FF] via-[#f4faf2] to-white border border-[#E0E7FF] p-6 shadow-xs transition duration-200"
       >
         <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-[#15803d] text-white shadow-xs">
+            <div className="p-2 rounded-xl bg-[#4F46E5] text-white shadow-xs">
               <CreditCard className="w-4 h-4" />
             </div>
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#15803d]">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#4F46E5]">
                 Gross Margin Optimization
               </span>
               <h4 className="text-base font-black text-slate-900">
@@ -133,7 +133,7 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
               </h4>
             </div>
           </div>
-          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-white text-emerald-950 border border-[#d2edd0] shadow-xs">
+          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-white text-indigo-950 border border-[#E0E7FF] shadow-xs">
             <Zap className="w-3.5 h-3.5 text-amber-500" />
             <span>Margin Under 70% ({inputs.grossMargin}%)</span>
           </span>
@@ -149,37 +149,37 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
             href="https://www.chargebee.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
+            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
           >
             <div>
-              <div className="text-xs font-bold text-slate-900 group-hover:text-[#15803d]">Chargebee</div>
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5]">Chargebee</div>
               <div className="text-[10px] text-slate-500">Automated recurring billing &amp; RevRec</div>
             </div>
-            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#15803d]" />
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#4F46E5]" />
           </a>
           <a
             href="https://www.maxio.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
+            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
           >
             <div>
-              <div className="text-xs font-bold text-slate-900 group-hover:text-[#15803d]">Maxio</div>
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5]">Maxio</div>
               <div className="text-[10px] text-slate-500">B2B SaaS financial operations &amp; metrics</div>
             </div>
-            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#15803d]" />
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#4F46E5]" />
           </a>
           <a
             href="https://stripe.com/billing"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
+            className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
           >
             <div>
-              <div className="text-xs font-bold text-slate-900 group-hover:text-[#15803d]">Stripe Billing</div>
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5]">Stripe Billing</div>
               <div className="text-[10px] text-slate-500">Flexible usage-based &amp; invoice automation</div>
             </div>
-            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#15803d]" />
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#4F46E5]" />
           </a>
         </div>
       </div>
@@ -190,15 +190,15 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
   return (
     <div
       id="monetization-card-default"
-      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#eef8ed] via-[#f7fcf6] to-white border border-[#d2edd0] p-6 shadow-xs"
+      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#EEF2FF] via-[#f7fcf6] to-white border border-[#E0E7FF] p-6 shadow-xs"
     >
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="space-y-1.5 max-w-xl">
           <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-[#15803d] text-white shadow-xs font-bold">
+            <div className="p-1.5 rounded-lg bg-[#4F46E5] text-white shadow-xs font-bold">
               <Download className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#15803d]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#4F46E5]">
               Free Executive Resource
             </span>
           </div>
@@ -213,13 +213,13 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
         {/* Lead Form */}
         <div className="w-full md:w-auto min-w-[280px]">
           {isSubmitted ? (
-            <div className="flex items-center gap-2 p-3.5 rounded-xl bg-[#eef8ed] border border-[#d2edd0] text-emerald-950 text-xs font-bold shadow-xs">
-              <CheckCircle2 className="w-4 h-4 text-[#15803d] shrink-0" />
+            <div className="flex items-center gap-2 p-3.5 rounded-xl bg-[#EEF2FF] border border-[#E0E7FF] text-indigo-950 text-xs font-bold shadow-xs">
+              <CheckCircle2 className="w-4 h-4 text-[#4F46E5] shrink-0" />
               <span>Report sent to your inbox! Check your email for download link.</span>
             </div>
           ) : (
             <form onSubmit={handleLeadSubmit} className="space-y-2">
-              <div className="flex items-center gap-1 bg-white border border-[#d2edd0] rounded-xl p-1 shadow-xs focus-within:border-[#15803d] focus-within:ring-2 focus-within:ring-[#15803d]/20">
+              <div className="flex items-center gap-1 bg-white border border-[#E0E7FF] rounded-xl p-1 shadow-xs focus-within:border-[#4F46E5] focus-within:ring-2 focus-within:ring-[#4F46E5]/20">
                 <Mail className="w-4 h-4 text-slate-400 ml-2.5 shrink-0" />
                 <input
                   id="lead-capture-email"
@@ -234,7 +234,7 @@ export default function SaaSMonetizationCard({ inputs }: SaaSMonetizationCardPro
                   id="btn-submit-lead-capture"
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#15803d] hover:bg-[#166534] active:bg-[#14532d] text-white font-bold text-xs transition shrink-0 cursor-pointer shadow-xs disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#4F46E5] hover:bg-[#4338CA] active:bg-[#3730A3] text-white font-bold text-xs transition shrink-0 cursor-pointer shadow-xs disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     'Sending...'

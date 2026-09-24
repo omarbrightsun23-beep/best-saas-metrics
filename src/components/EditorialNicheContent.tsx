@@ -55,7 +55,7 @@ export default function EditorialNicheContent({
       {/* Editorial Methodology & Review Bylines */}
       <div className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-5 shadow-2xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-600">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-[#eef8ed] border border-[#d2edd0] flex items-center justify-center text-emerald-950 font-bold text-xs shrink-0">
+          <div className="w-9 h-9 rounded-xl bg-[#EEF2FF] border border-[#E0E7FF] flex items-center justify-center text-indigo-950 font-bold text-xs shrink-0">
             BSM
           </div>
           <div>
@@ -73,7 +73,7 @@ export default function EditorialNicheContent({
       {/* 1. What is SaaS CAC Payback Period? */}
       <section className="space-y-4" aria-labelledby="what-is-payback-title">
         <div className="flex items-center gap-2">
-          <span className="p-1.5 rounded-lg bg-[#15803d] text-white shadow-2xs">
+          <span className="p-1.5 rounded-lg bg-[#4F46E5] text-white shadow-2xs">
             <BookOpen className="w-4 h-4" />
           </span>
           <h2
@@ -91,16 +91,16 @@ export default function EditorialNicheContent({
             In modern subscription economics, customers pay on a recurring monthly or annual basis, while customer acquisition costs (sales commissions, digital advertising, onboarding teams, and SDR salaries) are incurred upfront on Day 0. The faster a business recovers this initial cash outlay, the quicker it can reinvest those freed-up cash flows into acquiring subsequent cohorts without relying on external equity dilution.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-            <div className="p-4 rounded-2xl bg-[#eef8ed]/70 border border-[#d2edd0] space-y-1">
-              <span className="text-xs font-bold text-emerald-950 block">Upfront CAC Outlay</span>
+            <div className="p-4 rounded-2xl bg-[#EEF2FF]/70 border border-[#E0E7FF] space-y-1">
+              <span className="text-xs font-bold text-indigo-950 block">Upfront CAC Outlay</span>
               <p className="text-xs text-slate-600">Total sales, ads, tooling, and onboarding costs spent on customer acquisition.</p>
             </div>
-            <div className="p-4 rounded-2xl bg-[#eef8ed]/70 border border-[#d2edd0] space-y-1">
-              <span className="text-xs font-bold text-emerald-950 block">Gross Profit Contribution</span>
+            <div className="p-4 rounded-2xl bg-[#EEF2FF]/70 border border-[#E0E7FF] space-y-1">
+              <span className="text-xs font-bold text-indigo-950 block">Gross Profit Contribution</span>
               <p className="text-xs text-slate-600">Monthly recurring revenue (ARPA) adjusted for COGS, hosting, and customer success.</p>
             </div>
-            <div className="p-4 rounded-2xl bg-[#eef8ed]/70 border border-[#d2edd0] space-y-1">
-              <span className="text-xs font-bold text-emerald-950 block">Capital Velocity</span>
+            <div className="p-4 rounded-2xl bg-[#EEF2FF]/70 border border-[#E0E7FF] space-y-1">
+              <span className="text-xs font-bold text-indigo-950 block">Capital Velocity</span>
               <p className="text-xs text-slate-600">The frequency at which growth capital is recycled to fuel continuous customer acquisition.</p>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function EditorialNicheContent({
       {/* 2. Industry Benchmarks for [Niche Name] */}
       <section className="space-y-5" aria-labelledby="benchmarks-section-title">
         <div className="flex items-center gap-2.5 border-b border-slate-200 pb-3">
-          <div className="p-2 rounded-xl bg-[#eef8ed] text-[#15803d] border border-[#d2edd0] shadow-xs">
+          <div className="p-2 rounded-xl bg-[#EEF2FF] text-[#4F46E5] border border-[#E0E7FF] shadow-xs">
             <BarChart2 className="w-5 h-5" />
           </div>
           <div>
@@ -127,12 +127,12 @@ export default function EditorialNicheContent({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white border-2 border-emerald-500 hover:shadow-md hover:-translate-y-0.5 rounded-2xl p-5 shadow-xs space-y-2 transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+              <span className="text-xs font-bold uppercase tracking-wider text-indigo-800">
                 Top Quartile (Elite)
               </span>
-              <span className="w-2.5 h-2.5 rounded-full bg-[#15803d]" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#4F46E5]" />
             </div>
-            <div className="text-3xl font-black font-mono text-emerald-950">
+            <div className="text-3xl font-black font-mono text-indigo-950">
               {niche.benchmarkContext.topQuartilePayback}
             </div>
             <p className="text-xs text-slate-600 leading-relaxed">
@@ -140,7 +140,7 @@ export default function EditorialNicheContent({
             </p>
           </div>
 
-          <div className="bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-md hover:-translate-y-0.5 rounded-2xl p-5 shadow-xs space-y-2 transition-all duration-200">
+          <div className="bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-md hover:-translate-y-0.5 rounded-2xl p-5 shadow-xs space-y-2 transition-all duration-200">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
                 Median Benchmark (50th %ile)
@@ -172,10 +172,10 @@ export default function EditorialNicheContent({
         </div>
 
         {/* Analytical Context Callout */}
-        <div className="bg-[#eef8ed]/70 border border-[#d2edd0] rounded-2xl p-4 flex items-start gap-3 text-xs text-slate-700 shadow-xs">
+        <div className="bg-[#EEF2FF]/70 border border-[#E0E7FF] rounded-2xl p-4 flex items-start gap-3 text-xs text-slate-700 shadow-xs">
           <Lightbulb className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="leading-relaxed">
-            <strong className="text-emerald-950 font-bold">Sector Analysis: </strong>
+            <strong className="text-indigo-950 font-bold">Sector Analysis: </strong>
             {niche.benchmarkContext.analysis}
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function EditorialNicheContent({
       {/* Section 3: 5 Proven Strategies to Shorten Payback Period */}
       <section className="space-y-5" aria-labelledby="reduction-strategies-title">
         <div className="flex items-center gap-2.5 border-b border-slate-200 pb-3">
-          <div className="p-2 rounded-xl bg-[#eef8ed] text-[#15803d] border border-[#d2edd0] shadow-xs">
+          <div className="p-2 rounded-xl bg-[#EEF2FF] text-[#4F46E5] border border-[#E0E7FF] shadow-xs">
             <TrendingDown className="w-5 h-5" />
           </div>
           <div>
@@ -204,18 +204,18 @@ export default function EditorialNicheContent({
           {niche.reductionStrategies.map((strat, idx) => (
             <div
               key={idx}
-              className="bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-md hover:-translate-y-1 rounded-2xl p-5 shadow-xs transition-all duration-200 flex flex-col justify-between space-y-4"
+              className="bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-md hover:-translate-y-1 rounded-2xl p-5 shadow-xs transition-all duration-200 flex flex-col justify-between space-y-4"
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#eef8ed] border border-[#d2edd0] text-emerald-900">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#EEF2FF] border border-[#E0E7FF] text-indigo-900">
                     {strat.category}
                   </span>
                   <span
                     className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${
                       strat.impact === 'Critical'
                         ? 'bg-rose-50 text-rose-800 border-rose-200'
-                        : 'bg-emerald-50 text-emerald-800 border-emerald-200'
+                        : 'bg-emerald-50 text-indigo-800 border-emerald-200'
                     }`}
                   >
                     {strat.impact} Impact
@@ -224,9 +224,9 @@ export default function EditorialNicheContent({
                 <h4 className="text-sm font-black text-slate-900">{strat.title}</h4>
                 <p className="text-xs text-slate-600 leading-relaxed font-normal">{strat.description}</p>
               </div>
-              <div className="rounded-xl bg-[#eef8ed]/60 p-3.5 border border-[#d2edd0] text-[11px] text-slate-700 space-y-1 shadow-2xs">
-                <div className="flex items-center gap-1 font-bold text-emerald-950">
-                  <Zap className="w-3.5 h-3.5 text-[#15803d]" />
+              <div className="rounded-xl bg-[#EEF2FF]/60 p-3.5 border border-[#E0E7FF] text-[11px] text-slate-700 space-y-1 shadow-2xs">
+                <div className="flex items-center gap-1 font-bold text-indigo-950">
+                  <Zap className="w-3.5 h-3.5 text-[#4F46E5]" />
                   <span>Actionable Execution:</span>
                 </div>
                 <p className="leading-relaxed">{strat.actionableTactic}</p>
@@ -239,7 +239,7 @@ export default function EditorialNicheContent({
       {/* Section 4: Related SaaS Metrics Calculators */}
       <section className="space-y-4" aria-labelledby="related-calcs-title">
         <div className="flex items-center gap-2 border-b border-slate-200 pb-3">
-          <Calculator className="w-5 h-5 text-[#15803d]" />
+          <Calculator className="w-5 h-5 text-[#4F46E5]" />
           <h3 id="related-calcs-title" className="text-lg font-black text-slate-900">
             Related SaaS Financial &amp; Growth Calculators
           </h3>
@@ -249,13 +249,13 @@ export default function EditorialNicheContent({
             <Link
               key={i}
               href={calc.href}
-              className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-[#15803d] hover:shadow-md hover:-translate-y-1 active:scale-[0.98] transition-all duration-200 group cursor-pointer space-y-2 block text-left"
+              className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-[#4F46E5] hover:shadow-md hover:-translate-y-1 active:scale-[0.98] transition-all duration-200 group cursor-pointer space-y-2 block text-left"
             >
               <div className="flex items-center justify-between">
-                <h4 className="text-xs font-bold text-slate-900 group-hover:text-[#15803d] transition-colors">
+                <h4 className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5] transition-colors">
                   {calc.title}
                 </h4>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#15803d] group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#4F46E5] group-hover:translate-x-1 transition-all" />
               </div>
               <p className="text-[11px] text-slate-500 leading-relaxed">
                 {calc.desc}
@@ -268,7 +268,7 @@ export default function EditorialNicheContent({
       {/* Section 5: Frequently Asked Questions */}
       <section className="space-y-5" aria-labelledby="faq-section-title">
         <div className="flex items-center gap-2.5 border-b border-slate-200 pb-3">
-          <div className="p-2 rounded-xl bg-[#eef8ed] text-[#15803d] border border-[#d2edd0] shadow-xs">
+          <div className="p-2 rounded-xl bg-[#EEF2FF] text-[#4F46E5] border border-[#E0E7FF] shadow-xs">
             <HelpCircle className="w-5 h-5" />
           </div>
           <div>
@@ -286,18 +286,18 @@ export default function EditorialNicheContent({
             return (
               <div
                 key={index}
-                className="bg-white border border-slate-200/90 hover:border-[#d2edd0] rounded-2xl overflow-hidden shadow-2xs hover:shadow-xs transition-all duration-150"
+                className="bg-white border border-slate-200/90 hover:border-[#E0E7FF] rounded-2xl overflow-hidden shadow-2xs hover:shadow-xs transition-all duration-150"
               >
                 <button
                   type="button"
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-bold text-sm text-slate-900 hover:text-[#15803d] hover:bg-slate-50/50 transition-colors focus:outline-none cursor-pointer"
+                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-bold text-sm text-slate-900 hover:text-[#4F46E5] hover:bg-slate-50/50 transition-colors focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>
                   <ChevronDown
                     className={`w-4 h-4 text-slate-400 transition-transform duration-200 shrink-0 ml-2 ${
-                      isOpen ? 'rotate-180 text-[#15803d]' : ''
+                      isOpen ? 'rotate-180 text-[#4F46E5]' : ''
                     }`}
                   />
                 </button>
@@ -315,7 +315,7 @@ export default function EditorialNicheContent({
       {/* Section 6: Programmatic SEO Cross-Linking Mesh */}
       <section className="space-y-4 pt-6 border-t border-slate-200" aria-labelledby="pseo-mesh-title">
         <div className="flex items-center gap-2">
-          <Layers className="w-4 h-4 text-[#15803d]" />
+          <Layers className="w-4 h-4 text-[#4F46E5]" />
           <h3 id="pseo-mesh-title" className="text-sm font-bold uppercase tracking-wider text-slate-900">
             Compare Against Other SaaS Sub-Niche Benchmarks (pSEO Directory)
           </h3>
@@ -329,14 +329,14 @@ export default function EditorialNicheContent({
                 if (onSelectNiche) onSelectNiche(other);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="p-3.5 bg-white border border-slate-200 hover:border-[#15803d] hover:bg-[#eef8ed]/60 active:scale-95 rounded-xl text-left transition-all duration-150 group cursor-pointer shadow-2xs hover:shadow-xs hover:-translate-y-0.5"
+              className="p-3.5 bg-white border border-slate-200 hover:border-[#4F46E5] hover:bg-[#EEF2FF]/60 active:scale-95 rounded-xl text-left transition-all duration-150 group cursor-pointer shadow-2xs hover:shadow-xs hover:-translate-y-0.5"
             >
-              <div className="text-xs font-bold text-slate-900 group-hover:text-[#15803d] transition-colors truncate">
+              <div className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5] transition-colors truncate">
                 {other.name}
               </div>
               <div className="text-[10px] text-slate-500 mt-1 flex items-center justify-between">
                 <span>Target: {other.benchmarks.targetPaybackMedian} Mo</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#15803d] group-hover:translate-x-0.5 transition-all" />
+                <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#4F46E5] group-hover:translate-x-0.5 transition-all" />
               </div>
             </button>
           ))}

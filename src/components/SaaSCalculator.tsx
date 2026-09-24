@@ -183,7 +183,7 @@ export default function SaaSCalculator({
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-[#15803d] selection:text-white flex flex-col">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-[#4F46E5] selection:text-white flex flex-col">
       {/* Header Navigation */}
       <HeaderNav
         selectedNiche={selectedNiche}

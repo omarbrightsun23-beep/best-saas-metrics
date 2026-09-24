@@ -121,8 +121,8 @@ export default function LegalAndStaticPagesModal({
             onClick={() => onSelectTab('terms')}
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer whitespace-nowrap active:scale-95 ${
               activeTab === 'terms'
-                ? 'bg-[#15803d] text-white shadow-xs font-bold'
-                : 'bg-slate-50 text-slate-600 hover:bg-[#eef8ed] hover:text-emerald-950 hover:border-[#d2edd0] border border-transparent'
+                ? 'bg-[#4F46E5] text-white shadow-xs font-bold'
+                : 'bg-slate-50 text-slate-600 hover:bg-[#EEF2FF] hover:text-indigo-950 hover:border-[#E0E7FF] border border-transparent'
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
@@ -133,8 +133,8 @@ export default function LegalAndStaticPagesModal({
             onClick={() => onSelectTab('privacy')}
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer whitespace-nowrap active:scale-95 ${
               activeTab === 'privacy'
-                ? 'bg-[#15803d] text-white shadow-xs font-bold'
-                : 'bg-slate-50 text-slate-600 hover:bg-[#eef8ed] hover:text-emerald-950 hover:border-[#d2edd0] border border-transparent'
+                ? 'bg-[#4F46E5] text-white shadow-xs font-bold'
+                : 'bg-slate-50 text-slate-600 hover:bg-[#EEF2FF] hover:text-indigo-950 hover:border-[#E0E7FF] border border-transparent'
             }`}
           >
             <Shield className="w-3.5 h-3.5" />
@@ -145,8 +145,8 @@ export default function LegalAndStaticPagesModal({
             onClick={() => onSelectTab('disclaimer')}
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer whitespace-nowrap active:scale-95 ${
               activeTab === 'disclaimer'
-                ? 'bg-[#15803d] text-white shadow-xs font-bold'
-                : 'bg-slate-50 text-slate-600 hover:bg-[#eef8ed] hover:text-emerald-950 hover:border-[#d2edd0] border border-transparent'
+                ? 'bg-[#4F46E5] text-white shadow-xs font-bold'
+                : 'bg-slate-50 text-slate-600 hover:bg-[#EEF2FF] hover:text-indigo-950 hover:border-[#E0E7FF] border border-transparent'
             }`}
           >
             <AlertTriangle className="w-3.5 h-3.5" />
@@ -157,8 +157,8 @@ export default function LegalAndStaticPagesModal({
             onClick={() => onSelectTab('contact')}
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer whitespace-nowrap active:scale-95 ${
               activeTab === 'contact'
-                ? 'bg-[#15803d] text-white shadow-xs font-bold'
-                : 'bg-slate-50 text-slate-600 hover:bg-[#eef8ed] hover:text-emerald-950 hover:border-[#d2edd0] border border-transparent'
+                ? 'bg-[#4F46E5] text-white shadow-xs font-bold'
+                : 'bg-slate-50 text-slate-600 hover:bg-[#EEF2FF] hover:text-indigo-950 hover:border-[#E0E7FF] border border-transparent'
             }`}
           >
             <Mail className="w-3.5 h-3.5" />
@@ -169,8 +169,8 @@ export default function LegalAndStaticPagesModal({
             onClick={() => onSelectTab('sitemap')}
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer whitespace-nowrap active:scale-95 ${
               activeTab === 'sitemap'
-                ? 'bg-[#15803d] text-white shadow-xs font-bold'
-                : 'bg-slate-50 text-slate-600 hover:bg-[#eef8ed] hover:text-emerald-950 hover:border-[#d2edd0] border border-transparent'
+                ? 'bg-[#4F46E5] text-white shadow-xs font-bold'
+                : 'bg-slate-50 text-slate-600 hover:bg-[#EEF2FF] hover:text-indigo-950 hover:border-[#E0E7FF] border border-transparent'
             }`}
           >
             <Map className="w-3.5 h-3.5" />
@@ -256,12 +256,12 @@ export default function LegalAndStaticPagesModal({
                 </p>
               </div>
               <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 flex items-start gap-3">
-                <Shield className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                <Shield className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
                 <div className="space-y-1">
-                  <div className="text-xs font-bold text-emerald-900">
+                  <div className="text-xs font-bold text-indigo-900">
                     Zero Server-Side Telemetry &amp; Zero Cloud Data Storage
                   </div>
-                  <p className="text-xs text-emerald-800 leading-relaxed">
+                  <p className="text-xs text-indigo-800 leading-relaxed">
                     All financial inputs (CAC, ARPA, Gross Margins, Churn, and Sales Cycles) are computed <strong>100% client-side inside your browser</strong>. Your company's confidential metrics are never transmitted to, stored on, or harvested by our backend servers.
                   </p>
                 </div>
@@ -269,7 +269,7 @@ export default function LegalAndStaticPagesModal({
               <div className="space-y-4">
                 <section className="space-y-2">
                   <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                    <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
                     1. Information We Do Not Collect
                   </h2>
                   <p>
@@ -278,7 +278,7 @@ export default function LegalAndStaticPagesModal({
                 </section>
                 <section className="space-y-2">
                   <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                    <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
                     2. Local Storage &amp; Browser Memory
                   </h2>
                   <p>
@@ -287,7 +287,7 @@ export default function LegalAndStaticPagesModal({
                 </section>
                 <section className="space-y-2">
                   <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                    <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
                     3. Cookies &amp; Analytics
                   </h2>
                   <p>
@@ -296,7 +296,7 @@ export default function LegalAndStaticPagesModal({
                 </section>
                 <section className="space-y-2">
                   <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                    <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
                     4. Privacy Inquiries &amp; Data Rights
                   </h2>
                   <p>
@@ -423,7 +423,7 @@ export default function LegalAndStaticPagesModal({
                       onClick={() => handleCopy('Contact@bestsaasmetrics.com', 'email')}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition cursor-pointer"
                     >
-                      {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : null}
+                      {copiedEmail ? <Check className="w-3.5 h-3.5 text-indigo-600" /> : null}
                       <span>{copiedEmail ? 'Copied' : 'Copy Email'}</span>
                     </button>
                   </div>
@@ -431,10 +431,10 @@ export default function LegalAndStaticPagesModal({
 
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3 relative">
                   <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-xs">
+                    <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-xs">
                       <MessageSquare className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
                       Instant WhatsApp
                     </span>
                   </div>
@@ -444,7 +444,7 @@ export default function LegalAndStaticPagesModal({
                       href="https://wa.me/923336109888"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm sm:text-base font-black text-slate-900 hover:text-emerald-600 transition font-mono"
+                      className="text-sm sm:text-base font-black text-slate-900 hover:text-indigo-600 transition font-mono"
                     >
                       +92 333 6109888
                     </a>
@@ -454,7 +454,7 @@ export default function LegalAndStaticPagesModal({
                       href="https://wa.me/923336109888"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 text-white text-xs font-bold hover:bg-indigo-700 transition"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
                       <span>Chat on WhatsApp</span>
@@ -464,7 +464,7 @@ export default function LegalAndStaticPagesModal({
                       onClick={() => handleCopy('+923336109888', 'phone')}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition cursor-pointer"
                     >
-                      {copiedPhone ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : null}
+                      {copiedPhone ? <Check className="w-3.5 h-3.5 text-indigo-600" /> : null}
                       <span>{copiedPhone ? 'Copied' : 'Copy Number'}</span>
                     </button>
                   </div>
@@ -485,11 +485,11 @@ export default function LegalAndStaticPagesModal({
                 </div>
                 {isSubmitted ? (
                   <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
-                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-600 text-white">
+                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-600 text-white">
                       <Check className="w-4 h-4" />
                     </div>
-                    <div className="text-xs font-bold text-emerald-900">Message Draft Prepared!</div>
-                    <p className="text-xs text-emerald-700">
+                    <div className="text-xs font-bold text-indigo-900">Message Draft Prepared!</div>
+                    <p className="text-xs text-indigo-600">
                       Opening your email client to send your message directly to <strong>Contact@bestsaasmetrics.com</strong>.
                     </p>
                   </div>
@@ -557,7 +557,7 @@ Email: ${contactEmailInput}
 
 ${contactMessage}`
                         )}`}
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#15803d] hover:bg-[#166534] active:bg-[#14532d] text-white text-xs font-bold shadow-xs transition"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#4F46E5] hover:bg-[#4338CA] active:bg-[#3730A3] text-white text-xs font-bold shadow-xs transition"
                       >
                         <Send className="w-3.5 h-3.5 text-white" />
                         <span>Send Message</span>
@@ -616,7 +616,7 @@ ${contactMessage}`
                 <div className="space-y-6">
                   <div className="space-y-3">
                     <div className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                      <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
                       <span>2. Tools &amp; Interactive Visualizers</span>
                     </div>
                     <ul className="space-y-2 text-xs">
@@ -703,7 +703,7 @@ ${contactMessage}`
               href="https://wa.me/923336109888"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-600 font-bold hover:underline"
+              className="text-indigo-600 font-bold hover:underline"
             >
               WhatsApp: +92 333 6109888
             </a>

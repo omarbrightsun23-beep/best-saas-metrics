@@ -26,9 +26,9 @@ export default function ResultsDashboard({
 
   return (
     <div id="results-dashboard-pane" className="space-y-6">
-      <div className="bg-[#eef8ed] border border-[#d2edd0] rounded-2xl sm:rounded-3xl p-6 sm:p-7 space-y-5 text-slate-900 shadow-2xs">
+      <div className="bg-gradient-to-br from-indigo-50/80 via-purple-50/40 to-white border border-indigo-100/90 rounded-2xl sm:rounded-3xl p-6 sm:p-7 space-y-5 text-slate-900 shadow-sm">
         {/* Top Hero Metric */}
-        <div className="space-y-1 border-b border-[#d2edd0]/80 pb-4">
+        <div className="space-y-1 border-b border-indigo-100/80 pb-4">
           <div className="text-sm sm:text-base font-semibold text-slate-700">
             CAC Payback Period
           </div>
@@ -95,7 +95,7 @@ export default function ResultsDashboard({
           <div className="space-y-0.5">
             <div className="flex items-center justify-between text-slate-800 font-semibold text-sm">
               <span>VC Benchmark Target</span>
-              <span className="font-mono font-bold text-emerald-800">
+              <span className="font-mono font-bold text-indigo-700">
                 {selectedNiche.benchmarkContext.topQuartilePayback}
               </span>
             </div>
@@ -105,7 +105,7 @@ export default function ResultsDashboard({
           </div>
         </div>
 
-        <div className="pt-3 border-t border-[#d2edd0]/80 space-y-3">
+        <div className="pt-3 border-t border-indigo-100/80 space-y-3">
           <div className="space-y-0.5">
             <h3 className="text-sm font-bold text-slate-900">
               Export Executive Model Summary
@@ -117,7 +117,7 @@ export default function ResultsDashboard({
           <button
             type="button"
             onClick={handlePrint}
-            className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#15803d] hover:bg-[#166534] active:bg-[#14532d] text-white text-xs font-bold transition shadow-xs cursor-pointer active:scale-98"
+            className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 active:scale-98 text-white text-xs font-bold transition shadow-sm shadow-indigo-500/20 cursor-pointer"
           >
             <Download className="w-4 h-4 text-white" />
             <span>Export Executive Summary</span>

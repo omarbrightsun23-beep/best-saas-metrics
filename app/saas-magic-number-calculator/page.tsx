@@ -29,9 +29,9 @@ export default function MagicNumberCalculatorPage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1 w-full">
         <nav className="flex items-center gap-1.5 text-xs text-slate-500">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-indigo-600">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#15803d] font-bold">Magic Number Calculator</span>
+          <span className="text-[#4F46E5] font-bold">Magic Number Calculator</span>
         </nav>
 
         <div className="space-y-2 border-b border-slate-200 pb-5">
@@ -56,7 +56,7 @@ export default function MagicNumberCalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="curr-arr">Current Quarter Ending ARR ($)</label>
-                <span className="font-mono text-[#15803d]">${currentQuarterArr.toLocaleString()}</span>
+                <span className="font-mono text-[#4F46E5]">${currentQuarterArr.toLocaleString()}</span>
               </div>
               <input
                 id="curr-arr"
@@ -66,14 +66,14 @@ export default function MagicNumberCalculatorPage() {
                 step={25000}
                 value={currentQuarterArr}
                 onChange={(e) => setCurrentQuarterArr(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
             </div>
 
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="prior-arr">Prior Quarter Ending ARR ($)</label>
-                <span className="font-mono text-[#15803d]">${priorQuarterArr.toLocaleString()}</span>
+                <span className="font-mono text-[#4F46E5]">${priorQuarterArr.toLocaleString()}</span>
               </div>
               <input
                 id="prior-arr"
@@ -83,14 +83,14 @@ export default function MagicNumberCalculatorPage() {
                 step={25000}
                 value={priorQuarterArr}
                 onChange={(e) => setPriorQuarterArr(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
             </div>
 
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="sm-spend">Prior Quarter Sales &amp; Marketing Spend ($)</label>
-                <span className="font-mono text-[#15803d]">${quarterSmSpend.toLocaleString()}</span>
+                <span className="font-mono text-[#4F46E5]">${quarterSmSpend.toLocaleString()}</span>
               </div>
               <input
                 id="sm-spend"
@@ -100,14 +100,14 @@ export default function MagicNumberCalculatorPage() {
                 step={10000}
                 value={quarterSmSpend}
                 onChange={(e) => setQuarterSmSpend(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
             </div>
           </div>
 
           <div className="lg:col-span-6 space-y-6">
             <div className={`border rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs ${
-              magicNumber >= 1.0 ? 'bg-[#eef8ed] border-[#d2edd0]' : magicNumber >= 0.75 ? 'bg-blue-50 border-blue-200' : 'bg-amber-50 border-amber-200'
+              magicNumber >= 1.0 ? 'bg-[#EEF2FF] border-[#E0E7FF]' : magicNumber >= 0.75 ? 'bg-blue-50 border-blue-200' : 'bg-amber-50 border-amber-200'
             }`}>
               <div className="space-y-1 border-b border-slate-200 pb-4">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-700">SaaS Magic Number</div>

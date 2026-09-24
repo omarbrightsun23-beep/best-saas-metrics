@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 space-y-8">
         <div className="border-b border-slate-200 pb-5">
           <nav className="text-xs text-slate-500 mb-2">
-            <Link href="/" className="hover:text-emerald-700">Home</Link> &gt; <span>Privacy Policy</span>
+            <Link href="/" className="hover:text-indigo-600">Home</Link> &gt; <span>Privacy Policy</span>
           </nav>
           <h1 className="text-3xl font-black text-slate-950">Privacy Policy &amp; Cookie Disclosure</h1>
           <p className="text-xs text-slate-500 mt-1">Effective Date: January 1, 2026 · Last Updated: September 2026</p>
@@ -40,8 +40,8 @@ export default function PrivacyPage() {
           <ul className="list-disc list-inside space-y-1 pl-2 text-slate-600">
             <li>Google, as a third-party vendor, uses cookies to serve ads based on a user's prior visits to this website or other websites.</li>
             <li>Google's use of advertising cookies enables it and its partners to serve ads to users based on their visit to our sites and/or other sites on the Internet.</li>
-            <li>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline font-semibold">Google Ads Settings</a>.</li>
-            <li>Alternatively, users can opt out of third-party vendor use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline font-semibold">www.aboutads.info</a>.</li>
+            <li>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline font-semibold">Google Ads Settings</a>.</li>
+            <li>Alternatively, users can opt out of third-party vendor use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline font-semibold">www.aboutads.info</a>.</li>
           </ul>
 
           <h2 className="text-lg font-bold text-slate-900 pt-4 border-t border-slate-100">3. Local Storage &amp; User State</h2>

@@ -21,7 +21,7 @@ export default function DisclaimerPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 space-y-8">
         <div className="border-b border-slate-200 pb-5">
           <nav className="text-xs text-slate-500 mb-2">
-            <Link href="/" className="hover:text-emerald-700">Home</Link> &gt; <span>Disclaimer</span>
+            <Link href="/" className="hover:text-indigo-600">Home</Link> &gt; <span>Disclaimer</span>
           </nav>
           <h1 className="text-3xl font-black text-slate-950">Financial &amp; Legal Disclaimer</h1>
         </div>

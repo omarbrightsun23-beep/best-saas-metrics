@@ -22,8 +22,8 @@ export default function SemanticFormulasAndGlossary({
     >
       {/* Section Header */}
       <div className="space-y-2 border-b border-slate-200 pb-5">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#eef8ed] border border-[#d2edd0] text-emerald-950 text-xs font-semibold">
-          <BookOpen className="w-3.5 h-3.5 text-[#15803d]" />
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EEF2FF] border border-[#E0E7FF] text-indigo-950 text-xs font-semibold">
+          <BookOpen className="w-3.5 h-3.5 text-[#4F46E5]" />
           <span>SaaS FP&amp;A Operating Frameworks</span>
         </div>
         <h2
@@ -43,7 +43,7 @@ export default function SemanticFormulasAndGlossary({
         <div className="bg-slate-900 text-white border border-slate-800 rounded-2xl p-6 space-y-4 shadow-md">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="p-1.5 rounded-lg bg-[#15803d] text-white">
+              <div className="p-1.5 rounded-lg bg-[#4F46E5] text-white">
                 <Calculator className="w-4 h-4" />
               </div>
               <h3 className="text-sm font-bold text-white">
@@ -74,7 +74,7 @@ export default function SemanticFormulasAndGlossary({
         <div className="bg-slate-900 text-white border border-slate-800 rounded-2xl p-6 space-y-4 shadow-md">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="p-1.5 rounded-lg bg-[#15803d] text-white">
+              <div className="p-1.5 rounded-lg bg-[#4F46E5] text-white">
                 <DollarSign className="w-4 h-4" />
               </div>
               <h3 className="text-sm font-bold text-white">
@@ -105,7 +105,7 @@ export default function SemanticFormulasAndGlossary({
       {/* 2. Semantic Financial Entity Definition List (<dl>) */}
       <div className="space-y-4 pt-4 border-t border-slate-200">
         <div className="flex items-center gap-2">
-          <FileSpreadsheet className="w-4 h-4 text-[#15803d]" />
+          <FileSpreadsheet className="w-4 h-4 text-[#4F46E5]" />
           <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
             Canonical SaaS Accounting Entity Definitions
           </h3>
@@ -113,7 +113,7 @@ export default function SemanticFormulasAndGlossary({
         <dl className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600">
           <div className="p-4 bg-slate-50/70 border border-slate-200 rounded-xl space-y-1.5">
             <dt className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#15803d]" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#4F46E5]" />
               Fully Loaded CAC (ASC 340-40)
             </dt>
             <dd className="leading-relaxed">
@@ -122,7 +122,7 @@ export default function SemanticFormulasAndGlossary({
           </div>
           <div className="p-4 bg-slate-50/70 border border-slate-200 rounded-xl space-y-1.5">
             <dt className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#15803d]" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#4F46E5]" />
               Net Monthly Contribution (Net ARPA)
             </dt>
             <dd className="leading-relaxed">
@@ -131,7 +131,7 @@ export default function SemanticFormulasAndGlossary({
           </div>
           <div className="p-4 bg-slate-50/70 border border-slate-200 rounded-xl space-y-1.5">
             <dt className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#15803d]" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#4F46E5]" />
               Magic Number (SaaS Sales Efficiency)
             </dt>
             <dd className="leading-relaxed">
@@ -140,7 +140,7 @@ export default function SemanticFormulasAndGlossary({
           </div>
           <div className="p-4 bg-slate-50/70 border border-slate-200 rounded-xl space-y-1.5">
             <dt className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#15803d]" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#4F46E5]" />
               Net Revenue Retention (NRR) vs Logo Churn
             </dt>
             <dd className="leading-relaxed">

@@ -34,7 +34,6 @@ export default function HeaderNav({
       if (elem) {
         elem.scrollIntoView({ behavior: 'smooth' });
       } else if (typeof window !== 'undefined') {
-        // If not on the main page, navigate home
         window.location.href = `/#${id}`;
       }
     }
@@ -43,7 +42,7 @@ export default function HeaderNav({
   const currentSlug = selectedNiche?.slug || SUB_NICHES[0].slug;
 
   return (
-    <header id="header-nav" className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-2xs">
+    <header id="header-nav" className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-2xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
         {/* Brand Logo with Home Navigation Link */}
         <Link href="/" className="hover:opacity-95 transition-opacity" aria-label="bestsaasmetrics.com Home">
@@ -58,8 +57,8 @@ export default function HeaderNav({
               href="/"
               className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
                 activeTab === 'home'
-                  ? 'text-emerald-900 font-bold bg-[#eef8ed] border border-[#d2edd0]'
-                  : 'hover:text-emerald-900 hover:bg-slate-50'
+                  ? 'text-indigo-900 font-bold bg-indigo-50 border border-indigo-200/80'
+                  : 'hover:text-indigo-900 hover:bg-slate-50'
               }`}
             >
               Home
@@ -70,8 +69,8 @@ export default function HeaderNav({
               onClick={() => scrollTo('calculator-control-panel', 'calc')}
               className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
                 activeTab === 'calc'
-                  ? 'text-emerald-900 font-bold bg-[#eef8ed] border border-[#d2edd0]'
-                  : 'hover:text-emerald-900 hover:bg-slate-50'
+                  ? 'text-indigo-900 font-bold bg-indigo-50 border border-indigo-200/80'
+                  : 'hover:text-indigo-900 hover:bg-slate-50'
               }`}
             >
               Calculator
@@ -82,8 +81,8 @@ export default function HeaderNav({
               onClick={() => scrollTo('trajectory-chart-container', 'cashflow')}
               className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
                 activeTab === 'cashflow'
-                  ? 'text-emerald-900 font-bold bg-[#eef8ed] border border-[#d2edd0]'
-                  : 'hover:text-emerald-900 hover:bg-slate-50'
+                  ? 'text-indigo-900 font-bold bg-indigo-50 border border-indigo-200/80'
+                  : 'hover:text-indigo-900 hover:bg-slate-50'
               }`}
             >
               36-Mo Cashflow
@@ -94,8 +93,8 @@ export default function HeaderNav({
               onClick={() => scrollTo('editorial-niche-content', 'benchmarks')}
               className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
                 activeTab === 'benchmarks'
-                  ? 'text-emerald-900 font-bold bg-[#eef8ed] border border-[#d2edd0]'
-                  : 'hover:text-emerald-900 hover:bg-slate-50'
+                  ? 'text-indigo-900 font-bold bg-indigo-50 border border-indigo-200/80'
+                  : 'hover:text-indigo-900 hover:bg-slate-50'
               }`}
             >
               Benchmarks
@@ -106,8 +105,8 @@ export default function HeaderNav({
               onClick={() => scrollTo('semantic-math-glossary-section', 'formula')}
               className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
                 activeTab === 'formula'
-                  ? 'text-emerald-900 font-bold bg-[#eef8ed] border border-[#d2edd0]'
-                  : 'hover:text-emerald-900 hover:bg-slate-50'
+                  ? 'text-indigo-900 font-bold bg-indigo-50 border border-indigo-200/80'
+                  : 'hover:text-indigo-900 hover:bg-slate-50'
               }`}
             >
               Methodology &amp; Math
@@ -128,7 +127,7 @@ export default function HeaderNav({
                   }
                 }
               }}
-              className="bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#15803d]/30 cursor-pointer max-w-[140px] sm:max-w-none transition-all shadow-2xs"
+              className="bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 cursor-pointer max-w-[140px] sm:max-w-none transition-all shadow-2xs"
               aria-label="Select SaaS Industry Niche Preset"
             >
               {SUB_NICHES.map((n) => (
@@ -139,11 +138,11 @@ export default function HeaderNav({
             </select>
           </div>
 
-          {/* Primary Action Button in Forest Green */}
+          {/* Primary Action Button in Modern Purple-Indigo */}
           <button
             type="button"
             onClick={() => scrollTo('calculator-control-panel', 'calc')}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#15803d] hover:bg-[#166534] active:bg-[#14532d] text-white text-xs font-bold transition shadow-xs cursor-pointer active:scale-95"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 active:scale-95 text-white text-xs font-bold transition shadow-sm shadow-indigo-500/20 cursor-pointer"
           >
             <Calculator className="w-3.5 h-3.5 text-white" />
             <span className="hidden sm:inline">Launch Calculator</span>

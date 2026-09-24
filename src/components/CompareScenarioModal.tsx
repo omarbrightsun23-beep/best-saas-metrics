@@ -85,7 +85,7 @@ export default function CompareScenarioModal({
         <div className="flex items-center justify-between border-b border-slate-100 pb-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="p-1.5 rounded-lg bg-[#eef8ed] text-[#15803d] border border-[#d2edd0]">
+              <span className="p-1.5 rounded-lg bg-[#EEF2FF] text-[#4F46E5] border border-[#E0E7FF]">
                 <Sliders className="w-4 h-4" />
               </span>
               <h2 id="compare-scenario-title" className="text-xl font-black text-slate-900">
@@ -157,12 +157,12 @@ export default function CompareScenarioModal({
           </div>
 
           {/* Column B: Optimized Target */}
-          <div className="bg-[#eef8ed]/60 border border-[#d2edd0] rounded-2xl p-5 space-y-4">
-            <div className="flex items-center justify-between border-b border-[#d2edd0] pb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-950">
+          <div className="bg-[#EEF2FF]/60 border border-[#E0E7FF] rounded-2xl p-5 space-y-4">
+            <div className="flex items-center justify-between border-b border-[#E0E7FF] pb-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-indigo-950">
                 Scenario B (Target Sensitivity)
               </span>
-              <span className="w-2 h-2 rounded-full bg-[#15803d]" />
+              <span className="w-2 h-2 rounded-full bg-[#4F46E5]" />
             </div>
             <div className="space-y-3 text-xs">
               <div className="flex items-center justify-between">
@@ -179,7 +179,7 @@ export default function CompareScenarioModal({
                         cac: Math.max(100, Number(e.target.value) || 500),
                       })
                     }
-                    className="w-24 bg-white border border-[#d2edd0] rounded-lg px-2 py-1 text-right font-mono font-bold text-slate-900 text-xs shadow-2xs focus:outline-[#15803d]"
+                    className="w-24 bg-white border border-[#E0E7FF] rounded-lg px-2 py-1 text-right font-mono font-bold text-slate-900 text-xs shadow-2xs focus:outline-[#4F46E5]"
                   />
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function CompareScenarioModal({
                         arpa: Math.max(10, Number(e.target.value) || 50),
                       })
                     }
-                    className="w-24 bg-white border border-[#d2edd0] rounded-lg px-2 py-1 text-right font-mono font-bold text-slate-900 text-xs shadow-2xs focus:outline-[#15803d]"
+                    className="w-24 bg-white border border-[#E0E7FF] rounded-lg px-2 py-1 text-right font-mono font-bold text-slate-900 text-xs shadow-2xs focus:outline-[#4F46E5]"
                   />
                 </div>
               </div>
@@ -213,7 +213,7 @@ export default function CompareScenarioModal({
                       grossMargin: Math.max(10, Math.min(99, Number(e.target.value) || 80)),
                     })
                   }
-                  className="w-24 bg-white border border-[#d2edd0] rounded-lg px-2 py-1 text-right font-mono font-bold text-slate-900 text-xs shadow-2xs focus:outline-[#15803d]"
+                  className="w-24 bg-white border border-[#E0E7FF] rounded-lg px-2 py-1 text-right font-mono font-bold text-slate-900 text-xs shadow-2xs focus:outline-[#4F46E5]"
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -229,32 +229,32 @@ export default function CompareScenarioModal({
                       churnRate: Math.max(0.1, Math.min(20, Number(e.target.value) || 0.1)),
                     })
                   }
-                  className="w-24 bg-white border border-[#d2edd0] rounded-lg px-2 py-1 text-right font-mono font-bold text-slate-900 text-xs shadow-2xs focus:outline-[#15803d]"
+                  className="w-24 bg-white border border-[#E0E7FF] rounded-lg px-2 py-1 text-right font-mono font-bold text-slate-900 text-xs shadow-2xs focus:outline-[#4F46E5]"
                 />
               </div>
             </div>
-            <div className="border-t border-[#d2edd0] pt-3 space-y-2">
-              <div className="p-3 rounded-xl bg-white border border-[#d2edd0] flex justify-between items-center shadow-2xs">
+            <div className="border-t border-[#E0E7FF] pt-3 space-y-2">
+              <div className="p-3 rounded-xl bg-white border border-[#E0E7FF] flex justify-between items-center shadow-2xs">
                 <span className="text-xs font-bold text-slate-700">Payback Period:</span>
                 <span className="text-lg font-black font-mono text-slate-900">
                   {scenarioBMetrics.cacPaybackMonths} Mo{' '}
-                  <span className={`text-xs font-bold ${Number(paybackDiff) <= 0 ? 'text-emerald-700' : 'text-rose-700'}`}>
+                  <span className={`text-xs font-bold ${Number(paybackDiff) <= 0 ? 'text-indigo-600' : 'text-rose-700'}`}>
                     ({paybackDiff} Mo)
                   </span>
                 </span>
               </div>
-              <div className="p-3 rounded-xl bg-white border border-[#d2edd0] flex justify-between items-center shadow-2xs">
+              <div className="p-3 rounded-xl bg-white border border-[#E0E7FF] flex justify-between items-center shadow-2xs">
                 <span className="text-xs font-bold text-slate-700">Customer LTV:</span>
-                <span className="text-lg font-black font-mono text-emerald-800">
+                <span className="text-lg font-black font-mono text-indigo-800">
                   {formatCurrency(scenarioBMetrics.ltv)}{' '}
-                  <span className="text-xs font-bold text-emerald-700">(+{formatCurrency(ltvDiff)})</span>
+                  <span className="text-xs font-bold text-indigo-600">(+{formatCurrency(ltvDiff)})</span>
                 </span>
               </div>
-              <div className="p-3 rounded-xl bg-white border border-[#d2edd0] flex justify-between items-center shadow-2xs">
+              <div className="p-3 rounded-xl bg-white border border-[#E0E7FF] flex justify-between items-center shadow-2xs">
                 <span className="text-xs font-bold text-slate-700">LTV:CAC Ratio:</span>
-                <span className="text-lg font-black font-mono text-emerald-950">
+                <span className="text-lg font-black font-mono text-indigo-950">
                   {scenarioBMetrics.ltvCacRatio}:1{' '}
-                  <span className="text-xs font-bold text-emerald-700">(+{ltvRatioDiff})</span>
+                  <span className="text-xs font-bold text-indigo-600">(+{ltvRatioDiff})</span>
                 </span>
               </div>
             </div>
@@ -266,7 +266,7 @@ export default function CompareScenarioModal({
           <button
             type="button"
             onClick={handleApply}
-            className="px-4 py-2.5 rounded-xl bg-[#15803d] hover:bg-[#166534] active:bg-[#14532d] text-white text-xs font-bold transition-all duration-150 cursor-pointer shadow-xs active:scale-95 flex items-center gap-1.5"
+            className="px-4 py-2.5 rounded-xl bg-[#4F46E5] hover:bg-[#4338CA] active:bg-[#3730A3] text-white text-xs font-bold transition-all duration-150 cursor-pointer shadow-xs active:scale-95 flex items-center gap-1.5"
           >
             <Check className="w-3.5 h-3.5" />
             <span>Apply Scenario B to Calculator</span>

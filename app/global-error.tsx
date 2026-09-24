@@ -16,7 +16,7 @@ export default function GlobalError({
           <p className="text-slate-400 mb-6">An unexpected application error occurred.</p>
           <button
             onClick={() => reset()}
-            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 rounded text-white font-medium transition cursor-pointer"
+            className="px-4 py-2 bg-indigo-600 hover:bg-emerald-500 rounded text-white font-medium transition cursor-pointer"
           >
             Try again
           </button>

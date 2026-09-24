@@ -26,7 +26,7 @@ export default function Toast({ toasts, onDismiss }: ToastProps) {
 
         if (toast.type === 'success') {
           borderClass = 'border-emerald-200';
-          icon = <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />;
+          icon = <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" />;
         } else if (toast.type === 'error') {
           borderClass = 'border-rose-200';
           icon = <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />;

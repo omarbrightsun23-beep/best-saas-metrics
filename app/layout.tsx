@@ -84,7 +84,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-[#15803d] selection:text-white min-h-screen flex flex-col">
+      <body className="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-[#6366F1] selection:text-white min-h-screen flex flex-col">
         {children}
       </body>
     </html>

@@ -38,9 +38,9 @@ export default function CitationSection() {
   ];
 
   return (
-    <section id="citations-sources-section" className="mt-8 bg-[#eef8ed]/60 border border-[#d2edd0] rounded-2xl p-6 shadow-xs space-y-4">
-      <div className="flex items-center gap-2 border-b border-[#d2edd0]/80 pb-3">
-        <div className="p-1.5 rounded-lg bg-[#15803d] text-white shadow-xs">
+    <section id="citations-sources-section" className="mt-8 bg-[#EEF2FF]/60 border border-[#E0E7FF] rounded-2xl p-6 shadow-xs space-y-4">
+      <div className="flex items-center gap-2 border-b border-[#E0E7FF]/80 pb-3">
+        <div className="p-1.5 rounded-lg bg-[#4F46E5] text-white shadow-xs">
           <BookOpen className="w-4 h-4" />
         </div>
         <div>
@@ -57,23 +57,23 @@ export default function CitationSection() {
               href={c.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start justify-between p-3.5 rounded-xl bg-white border border-[#d2edd0] hover:border-[#15803d] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
+              className="flex items-start justify-between p-3.5 rounded-xl bg-white border border-[#E0E7FF] hover:border-[#4F46E5] hover:shadow-xs transition text-slate-900 group shadow-2xs cursor-pointer"
             >
               <div className="space-y-1 pr-2">
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-bold text-emerald-900 bg-[#eef8ed] border border-[#d2edd0] px-2 py-0.5 rounded-md">
+                  <span className="text-[10px] font-bold text-indigo-900 bg-[#EEF2FF] border border-[#E0E7FF] px-2 py-0.5 rounded-md">
                     {c.badge}
                   </span>
                   <span className="text-[11px] font-medium text-slate-500">{c.organization}</span>
                 </div>
-                <h4 className="text-xs font-bold text-slate-900 group-hover:text-[#15803d] leading-snug">
+                <h4 className="text-xs font-bold text-slate-900 group-hover:text-[#4F46E5] leading-snug">
                   {c.title}
                 </h4>
                 <p className="text-[11px] text-slate-600 leading-relaxed font-normal">
                   {c.description}
                 </p>
               </div>
-              <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#15803d] shrink-0 mt-1" />
+              <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#4F46E5] shrink-0 mt-1" />
             </a>
           );
         })}

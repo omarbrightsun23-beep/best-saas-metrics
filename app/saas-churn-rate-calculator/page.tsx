@@ -22,9 +22,9 @@ export default function ChurnRateCalculatorPage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1 w-full">
         <nav className="flex items-center gap-1.5 text-xs text-slate-500">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-indigo-600">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#15803d] font-bold">Churn Rate Calculator</span>
+          <span className="text-[#4F46E5] font-bold">Churn Rate Calculator</span>
         </nav>
 
         <div className="space-y-2 border-b border-slate-200 pb-5">
@@ -43,7 +43,7 @@ export default function ChurnRateCalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="start-cust">Customers at Beginning of Month</label>
-                <span className="font-mono text-[#15803d]">{startCustomers}</span>
+                <span className="font-mono text-[#4F46E5]">{startCustomers}</span>
               </div>
               <input
                 id="start-cust"
@@ -53,7 +53,7 @@ export default function ChurnRateCalculatorPage() {
                 step={10}
                 value={startCustomers}
                 onChange={(e) => setStartCustomers(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
             </div>
 
@@ -70,14 +70,14 @@ export default function ChurnRateCalculatorPage() {
                 step={1}
                 value={churnedCustomers}
                 onChange={(e) => setChurnedCustomers(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
             </div>
           </div>
 
           <div className="lg:col-span-6 space-y-6">
-            <div className="bg-[#eef8ed] border border-[#d2edd0] rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs">
-              <div className="space-y-1 border-b border-[#d2edd0]/80 pb-4">
+            <div className="bg-[#EEF2FF] border border-[#E0E7FF] rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs">
+              <div className="space-y-1 border-b border-[#E0E7FF]/80 pb-4">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-700">Monthly Logo Churn</div>
                 <div className="text-5xl font-black text-slate-950 font-mono">
                   {logoChurnRate}% <span className="text-lg font-bold text-slate-600">/ mo</span>

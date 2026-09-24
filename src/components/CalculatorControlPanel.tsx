@@ -86,7 +86,7 @@ export default function CalculatorControlPanel({
             <label htmlFor="input-cac-number" className="text-sm font-bold text-slate-900">
               Customer Acquisition Cost (CAC)
             </label>
-            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-emerald-600 focus-within:ring-1 focus-within:ring-emerald-600">
+            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
               <span className="text-xs text-slate-400 font-bold mr-0.5">$</span>
               <input
                 id="input-cac-number"
@@ -108,7 +108,7 @@ export default function CalculatorControlPanel({
             step={250}
             value={inputs.cac}
             onChange={(e) => handleCacChange(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#6366F1]"
           />
           <div className="flex justify-between text-[11px] font-medium text-slate-400">
             <span>$500</span>
@@ -125,7 +125,7 @@ export default function CalculatorControlPanel({
             <label htmlFor="input-arpa-number" className="text-sm font-bold text-slate-900">
               Average Revenue per Account (ARPA)
             </label>
-            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-emerald-600 focus-within:ring-1 focus-within:ring-emerald-600">
+            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
               <span className="text-xs text-slate-400 font-bold mr-0.5">$</span>
               <input
                 id="input-arpa-number"
@@ -148,7 +148,7 @@ export default function CalculatorControlPanel({
             step={25}
             value={inputs.arpa}
             onChange={(e) => handleArpaChange(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#6366F1]"
           />
           <div className="flex justify-between text-[11px] font-medium text-slate-400">
             <span>$50/mo</span>
@@ -165,7 +165,7 @@ export default function CalculatorControlPanel({
             <label htmlFor="input-margin-number" className="text-sm font-bold text-slate-900">
               Software Gross Margin
             </label>
-            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-emerald-600 focus-within:ring-1 focus-within:ring-emerald-600">
+            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
               <input
                 id="input-margin-number"
                 type="number"
@@ -187,7 +187,7 @@ export default function CalculatorControlPanel({
             step={1}
             value={inputs.grossMargin}
             onChange={(e) => handleGrossMarginChange(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#6366F1]"
           />
           <div className="flex justify-between text-[11px] font-medium text-slate-400">
             <span>30%</span>
@@ -204,7 +204,7 @@ export default function CalculatorControlPanel({
             <label htmlFor="input-churn-number" className="text-sm font-bold text-slate-900">
               Monthly Logo Churn Rate
             </label>
-            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-emerald-600 focus-within:ring-1 focus-within:ring-emerald-600">
+            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
               <input
                 id="input-churn-number"
                 type="number"
@@ -226,7 +226,7 @@ export default function CalculatorControlPanel({
             step={0.1}
             value={inputs.churnRate}
             onChange={(e) => handleChurnChange(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#6366F1]"
           />
           <div className="flex justify-between text-[11px] font-medium text-slate-400">
             <span>0.2%/mo</span>
@@ -243,7 +243,7 @@ export default function CalculatorControlPanel({
             <label htmlFor="input-sales-cycle-number" className="text-sm font-bold text-slate-900">
               Sales Cycle Duration
             </label>
-            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-emerald-600 focus-within:ring-1 focus-within:ring-emerald-600">
+            <div className="flex items-center bg-white border border-slate-300 rounded-lg px-2.5 py-1 shadow-2xs focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
               <input
                 id="input-sales-cycle-number"
                 type="number"
@@ -265,7 +265,7 @@ export default function CalculatorControlPanel({
             step={1}
             value={inputs.salesCycle}
             onChange={(e) => handleSalesCycleChange(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+            className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#6366F1]"
           />
           <div className="flex justify-between text-[11px] font-medium text-slate-400">
             <span>1 Month</span>

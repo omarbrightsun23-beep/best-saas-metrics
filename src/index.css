@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply antialiased text-slate-900 bg-slate-50 selection:bg-[#15803d] selection:text-white;
+    @apply antialiased text-slate-900 bg-slate-50 selection:bg-[#6366F1] selection:text-white;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     text-rendering: optimizeLegibility;
   }
@@ -15,7 +15,7 @@
   /* Clean Focus Ring for Accessible Controls */
   button:focus-visible,
   a:focus-visible {
-    outline: 2px solid #15803d;
+    outline: 2px solid #6366F1;
     outline-offset: 2px;
   }
 
@@ -33,20 +33,20 @@
   }
 }
 
-/* Executive Green Hero Canvas - Institutional Matte Obsidian Forest */
-.hero-executive-green {
-  background-color: #070e09;
+/* Modern SaaS Indigo Canvas */
+.hero-executive-indigo {
+  background-color: #0A0F1D;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(132, 204, 22, 0.12), transparent),
-    linear-gradient(180deg, #09130c 0%, #060b07 100%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent),
+    linear-gradient(180deg, #0B0F19 0%, #080C16 100%);
 }
 
 /* Precise Architectural Blueprint Grid */
 .hero-grid-pattern {
   background-size: 24px 24px;
   background-image:
-    linear-gradient(to right, rgba(132, 204, 22, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(132, 204, 22, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
 }
 
 /* Print Stylesheet for Executive PDF / Board Exports */
@@ -77,5 +77,5 @@
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #84cc16;
+  background: #6366F1;
 }

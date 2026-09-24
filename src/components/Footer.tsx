@@ -15,7 +15,7 @@ interface FooterProps {
 
 export default function Footer({ onSelectNiche }: FooterProps = {}) {
   return (
-    <footer id="site-footer" className="mt-16 border-t border-[#132817] bg-[#061208] py-12 text-slate-400 text-xs">
+    <footer id="site-footer" className="mt-16 border-t border-slate-800 bg-[#0B0F19] py-12 text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand & Mission */}
@@ -24,8 +24,8 @@ export default function Footer({ onSelectNiche }: FooterProps = {}) {
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed font-normal">
               Modeled on established venture capital and SaaS financial frameworks from David Skok (Matrix Partners), Bessemer Venture Partners (BVP), and OpenView. 100% computed client-side with zero remote data storage.
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0d2212] border border-[#1b3d22] text-[11px] text-emerald-300 font-medium">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#131B2E] border border-indigo-900/50 text-[11px] text-indigo-300 font-medium">
+              <ShieldCheck className="w-3.5 h-3.5 text-indigo-400" />
               <span>Zero server-side persistence of financial inputs</span>
             </div>
           </div>
@@ -110,7 +110,6 @@ export default function Footer({ onSelectNiche }: FooterProps = {}) {
                   Academic &amp; Benchmark Citations
                 </Link>
               </li>
-
             </ul>
           </div>
         </div>
@@ -122,7 +121,7 @@ export default function Footer({ onSelectNiche }: FooterProps = {}) {
           </div>
           <div className="flex items-center gap-4">
             <span className="inline-flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-full bg-indigo-500" />
               <span>Calculated Client-Side in Browser</span>
             </span>
             <span>·</span>

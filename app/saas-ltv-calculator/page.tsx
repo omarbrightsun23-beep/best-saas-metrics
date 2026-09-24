@@ -25,9 +25,9 @@ export default function LtvCalculatorPage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1 w-full">
         <nav className="flex items-center gap-1.5 text-xs text-slate-500">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-indigo-600">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#15803d] font-bold">LTV Calculator</span>
+          <span className="text-[#4F46E5] font-bold">LTV Calculator</span>
         </nav>
 
         <div className="space-y-2 border-b border-slate-200 pb-5">
@@ -46,7 +46,7 @@ export default function LtvCalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="arpa-ltv">Monthly ARPA ($)</label>
-                <span className="font-mono text-[#15803d]">${arpa.toLocaleString()}/mo</span>
+                <span className="font-mono text-[#4F46E5]">${arpa.toLocaleString()}/mo</span>
               </div>
               <input
                 id="arpa-ltv"
@@ -56,14 +56,14 @@ export default function LtvCalculatorPage() {
                 step={25}
                 value={arpa}
                 onChange={(e) => setArpa(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
             </div>
 
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="margin-ltv">Gross Margin (%)</label>
-                <span className="font-mono text-[#15803d]">{margin}%</span>
+                <span className="font-mono text-[#4F46E5]">{margin}%</span>
               </div>
               <input
                 id="margin-ltv"
@@ -73,14 +73,14 @@ export default function LtvCalculatorPage() {
                 step={1}
                 value={margin}
                 onChange={(e) => setMargin(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
             </div>
 
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="churn-ltv">Monthly Logo Churn (%)</label>
-                <span className="font-mono text-[#15803d]">{churn}%</span>
+                <span className="font-mono text-[#4F46E5]">{churn}%</span>
               </div>
               <input
                 id="churn-ltv"
@@ -90,14 +90,14 @@ export default function LtvCalculatorPage() {
                 step={0.1}
                 value={churn}
                 onChange={(e) => setChurn(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
             </div>
           </div>
 
           <div className="lg:col-span-6 space-y-6">
-            <div className="bg-[#eef8ed] border border-[#d2edd0] rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs">
-              <div className="space-y-1 border-b border-[#d2edd0]/80 pb-4">
+            <div className="bg-[#EEF2FF] border border-[#E0E7FF] rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs">
+              <div className="space-y-1 border-b border-[#E0E7FF]/80 pb-4">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-700">Projected Customer LTV</div>
                 <div className="text-5xl font-black text-slate-950 font-mono">
                   ${ltv.toLocaleString()}

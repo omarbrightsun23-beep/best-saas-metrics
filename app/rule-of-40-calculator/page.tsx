@@ -27,9 +27,9 @@ export default function RuleOf40CalculatorPage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1 w-full">
         <nav className="flex items-center gap-1.5 text-xs text-slate-500">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-indigo-600">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#15803d] font-bold">Rule of 40 Calculator</span>
+          <span className="text-[#4F46E5] font-bold">Rule of 40 Calculator</span>
         </nav>
 
         <div className="space-y-2 border-b border-slate-200 pb-5">
@@ -59,7 +59,7 @@ export default function RuleOf40CalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="growth-rate">Year-over-Year (YoY) ARR Growth Rate (%)</label>
-                <span className="font-mono text-[#15803d]">{growthRate}%</span>
+                <span className="font-mono text-[#4F46E5]">{growthRate}%</span>
               </div>
               <input
                 id="growth-rate"
@@ -69,7 +69,7 @@ export default function RuleOf40CalculatorPage() {
                 step={1}
                 value={growthRate}
                 onChange={(e) => setGrowthRate(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
               <p className="text-[11px] text-slate-500">Annual recurring revenue growth percentage over the trailing 12 months.</p>
             </div>
@@ -78,7 +78,7 @@ export default function RuleOf40CalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="profit-margin">Free Cash Flow (FCF) or EBITDA Margin (%)</label>
-                <span className="font-mono text-[#15803d]">{profitMargin}%</span>
+                <span className="font-mono text-[#4F46E5]">{profitMargin}%</span>
               </div>
               <input
                 id="profit-margin"
@@ -88,7 +88,7 @@ export default function RuleOf40CalculatorPage() {
                 step={1}
                 value={profitMargin}
                 onChange={(e) => setProfitMargin(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
               <p className="text-[11px] text-slate-500">Operational free cash flow margin (FCF / Revenue) or EBITDA percentage.</p>
             </div>
@@ -96,7 +96,7 @@ export default function RuleOf40CalculatorPage() {
 
           <div className="lg:col-span-6 space-y-6">
             <div className={`border rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs ${
-              isHealthy ? 'bg-[#eef8ed] border-[#d2edd0]' : 'bg-amber-50/60 border-amber-200'
+              isHealthy ? 'bg-[#EEF2FF] border-[#E0E7FF]' : 'bg-amber-50/60 border-amber-200'
             }`}>
               <div className="space-y-1 border-b border-slate-200/80 pb-4">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-700">Rule of 40 Score</div>
@@ -104,7 +104,7 @@ export default function RuleOf40CalculatorPage() {
                   {ruleOf40Score}%{' '}
                   <span className={`text-base font-bold px-2.5 py-1 rounded-full border ${
                     isHealthy
-                      ? 'bg-emerald-100 text-emerald-900 border-emerald-300'
+                      ? 'bg-emerald-100 text-indigo-900 border-emerald-300'
                       : 'bg-amber-100 text-amber-900 border-amber-300'
                   }`}>
                     {isHealthy ? '✓ Meets Benchmark' : 'Below 40% Target'}

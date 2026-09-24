@@ -104,9 +104,9 @@ export default function UtilityActions({
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3 bg-white border border-slate-200 rounded-2xl px-4 py-2.5 shadow-xs">
+    <div className="flex flex-wrap items-center justify-between gap-3 bg-white border border-slate-200/80 rounded-2xl px-4 py-2.5 shadow-2xs">
       <div className="flex items-center gap-2 text-xs text-slate-600">
-        <span className="w-2 h-2 rounded-full bg-[#15803d]" />
+        <span className="w-2 h-2 rounded-full bg-indigo-600" />
         <span className="font-semibold text-slate-800">{selectedNiche.name}</span>
         <span className="text-slate-400">·</span>
         <span className="text-slate-500">Live Client-Side Calculation</span>
@@ -115,9 +115,9 @@ export default function UtilityActions({
         <button
           type="button"
           onClick={onOpenCompare}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-[#eef8ed] text-slate-700 hover:text-emerald-900 text-xs font-semibold border border-slate-200 hover:border-[#d2edd0] transition cursor-pointer"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-indigo-50 text-slate-700 hover:text-indigo-900 text-xs font-semibold border border-slate-200 hover:border-indigo-200 transition cursor-pointer"
         >
-          <GitCompare className="w-3.5 h-3.5 text-[#15803d]" />
+          <GitCompare className="w-3.5 h-3.5 text-indigo-600" />
           <span>Compare Scenario</span>
         </button>
 
@@ -126,7 +126,7 @@ export default function UtilityActions({
           onClick={handleSaveModel}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 transition cursor-pointer"
         >
-          {isSaved ? <Check className="w-3.5 h-3.5 text-[#15803d]" /> : <BookmarkCheck className="w-3.5 h-3.5 text-slate-600" />}
+          {isSaved ? <Check className="w-3.5 h-3.5 text-indigo-600" /> : <BookmarkCheck className="w-3.5 h-3.5 text-slate-600" />}
           <span>{isSaved ? 'Saved' : 'Save'}</span>
         </button>
 
@@ -135,7 +135,7 @@ export default function UtilityActions({
           onClick={handleShareLink}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 transition cursor-pointer"
         >
-          {isCopied ? <Check className="w-3.5 h-3.5 text-[#15803d]" /> : <Share2 className="w-3.5 h-3.5 text-slate-600" />}
+          {isCopied ? <Check className="w-3.5 h-3.5 text-indigo-600" /> : <Share2 className="w-3.5 h-3.5 text-slate-600" />}
           <span>{isCopied ? 'Link Copied' : 'Share'}</span>
         </button>
 
@@ -143,7 +143,7 @@ export default function UtilityActions({
           type="button"
           onClick={handleExportPdf}
           disabled={isExportingPdf}
-          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#15803d] hover:bg-[#166534] active:bg-[#14532d] text-white text-xs font-bold shadow-xs transition cursor-pointer disabled:opacity-50"
+          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 active:scale-95 text-white text-xs font-bold shadow-xs transition cursor-pointer disabled:opacity-50"
         >
           <Download className="w-3.5 h-3.5 text-white" />
           <span>{isExportingPdf ? 'Exporting...' : 'Export PDF'}</span>

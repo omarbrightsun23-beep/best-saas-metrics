@@ -51,7 +51,7 @@ export default function Logo({
 
   // Text color based on variant
   const titleColor = isDark ? 'text-white' : 'text-slate-950';
-  const dotComColor = 'text-[#84CC16]';
+  const dotComColor = 'text-[#6366F1]';
   const taglineColor = isDark ? 'text-slate-400' : 'text-slate-500';
 
   return (
@@ -64,7 +64,7 @@ export default function Logo({
         <div
           className={`${config.markSize} relative flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105 ${
             withBackground
-              ? 'rounded-2xl bg-[#0F1117] border border-slate-800 p-1.5 shadow-md shadow-[#84CC16]/15'
+              ? 'rounded-2xl bg-[#0F1117] border border-slate-800 p-1.5 shadow-md shadow-[#6366F1]/20'
               : ''
           }`}
         >
@@ -72,12 +72,12 @@ export default function Logo({
             viewBox="0 0 100 100"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full drop-shadow-[0_2px_8px_rgba(132,204,22,0.25)]"
+            className="w-full h-full drop-shadow-[0_2px_8px_rgba(99,102,241,0.35)]"
           >
             {/* The SaaS Sigma: Summation + Growth Arrow */}
             <path
               d="M 76 80 L 26 80 L 52 50 L 26 20 L 64 20"
-              stroke="#84CC16"
+              stroke="#6366F1"
               strokeWidth="11"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -85,7 +85,7 @@ export default function Logo({
             {/* Forward Arrowhead */}
             <polygon
               points="62,11 81,20 62,29"
-              fill="#84CC16"
+              fill="#6366F1"
             />
           </svg>
         </div>

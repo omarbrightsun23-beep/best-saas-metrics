@@ -67,7 +67,7 @@ export default function VercelConfigModal({ isOpen, onClose }: VercelConfigModal
         <div className="flex items-start justify-between border-b border-slate-100 pb-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="p-1.5 rounded-lg bg-[#eef8ed] text-[#15803d] border border-[#d2edd0]">
+              <span className="p-1.5 rounded-lg bg-[#EEF2FF] text-[#4F46E5] border border-[#E0E7FF]">
                 <FileCode className="w-4 h-4" />
               </span>
               <h2 id="vercel-modal-title" className="text-lg sm:text-xl font-black text-slate-900">
@@ -92,8 +92,8 @@ export default function VercelConfigModal({ isOpen, onClose }: VercelConfigModal
         <div className="space-y-2">
           <div className="flex items-center justify-between text-xs text-slate-600">
             <div className="flex items-center gap-1.5 font-bold text-slate-800">
-              <span className="w-2 h-2 rounded-full bg-[#15803d]" />
-              <span>Root Directory: <code className="text-xs font-mono text-[#15803d]">./vercel.json</code></span>
+              <span className="w-2 h-2 rounded-full bg-[#4F46E5]" />
+              <span>Root Directory: <code className="text-xs font-mono text-[#4F46E5]">./vercel.json</code></span>
             </div>
             <div className="flex items-center gap-2">
               <button
@@ -101,15 +101,15 @@ export default function VercelConfigModal({ isOpen, onClose }: VercelConfigModal
                 onClick={handleCopy}
                 className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs transition cursor-pointer active:scale-95"
               >
-                {copied ? <Check className="w-3.5 h-3.5 text-[#15803d]" /> : <Copy className="w-3.5 h-3.5 text-slate-600" />}
+                {copied ? <Check className="w-3.5 h-3.5 text-[#4F46E5]" /> : <Copy className="w-3.5 h-3.5 text-slate-600" />}
                 <span>{copied ? 'Copied!' : 'Copy Code'}</span>
               </button>
               <button
                 type="button"
                 onClick={handleDownloadFile}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#eef8ed] hover:bg-[#dcfce7] text-emerald-950 border border-[#d2edd0] font-semibold text-xs transition cursor-pointer active:scale-95"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#EEF2FF] hover:bg-[#E0E7FF] text-indigo-950 border border-[#E0E7FF] font-semibold text-xs transition cursor-pointer active:scale-95"
               >
-                <Download className="w-3.5 h-3.5 text-[#15803d]" />
+                <Download className="w-3.5 h-3.5 text-[#4F46E5]" />
                 <span>Download vercel.json</span>
               </button>
             </div>
@@ -122,16 +122,16 @@ export default function VercelConfigModal({ isOpen, onClose }: VercelConfigModal
         </div>
 
         {/* Instructions & Why it works */}
-        <div className="space-y-3 bg-[#eef8ed]/50 border border-[#d2edd0] rounded-2xl p-4 text-xs text-slate-700">
-          <div className="font-bold text-emerald-950 flex items-center gap-1.5">
-            <Server className="w-4 h-4 text-[#15803d]" />
+        <div className="space-y-3 bg-[#EEF2FF]/50 border border-[#E0E7FF] rounded-2xl p-4 text-xs text-slate-700">
+          <div className="font-bold text-indigo-950 flex items-center gap-1.5">
+            <Server className="w-4 h-4 text-[#4F46E5]" />
             <span>How This Resolves the Vercel 404 Issue:</span>
           </div>
           <p className="leading-relaxed">
-            By default, Vercel looks for a static file matching the requested path on the filesystem. When a user or search engine navigates directly to an inner route (like <code className="font-mono bg-white px-1 py-0.5 rounded border border-[#d2edd0]">/enterprise-b2b-saas</code>), Vercel cannot find that HTML file and returns a 404.
+            By default, Vercel looks for a static file matching the requested path on the filesystem. When a user or search engine navigates directly to an inner route (like <code className="font-mono bg-white px-1 py-0.5 rounded border border-[#E0E7FF]">/enterprise-b2b-saas</code>), Vercel cannot find that HTML file and returns a 404.
           </p>
           <p className="leading-relaxed">
-            Adding <code className="font-mono bg-white px-1 py-0.5 rounded border border-[#d2edd0]">vercel.json</code> to your root folder instructs Vercel to rewrite all incoming route requests to <code className="font-mono bg-white px-1 py-0.5 rounded border border-[#d2edd0]">/index.html</code>, allowing your client-side React code to handle routing cleanly.
+            Adding <code className="font-mono bg-white px-1 py-0.5 rounded border border-[#E0E7FF]">vercel.json</code> to your root folder instructs Vercel to rewrite all incoming route requests to <code className="font-mono bg-white px-1 py-0.5 rounded border border-[#E0E7FF]">/index.html</code>, allowing your client-side React code to handle routing cleanly.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function VercelConfigModal({ isOpen, onClose }: VercelConfigModal
         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div className="space-y-0.5">
             <div className="flex items-center gap-2">
-              <FolderArchive className="w-4 h-4 text-[#15803d]" />
+              <FolderArchive className="w-4 h-4 text-[#4F46E5]" />
               <h4 className="text-xs font-bold text-slate-900">Complete Project Package (ZIP)</h4>
             </div>
             <p className="text-[11px] text-slate-500">
@@ -149,7 +149,7 @@ export default function VercelConfigModal({ isOpen, onClose }: VercelConfigModal
           <a
             href="/project.zip"
             download="bestsaasmetrics-project.zip"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#15803d] hover:bg-[#166534] active:bg-[#14532d] text-white text-xs font-bold transition shadow-xs cursor-pointer shrink-0 active:scale-95"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#4F46E5] hover:bg-[#4338CA] active:bg-[#3730A3] text-white text-xs font-bold transition shadow-xs cursor-pointer shrink-0 active:scale-95"
           >
             <Download className="w-3.5 h-3.5 text-white" />
             <span>Download Project ZIP</span>
@@ -159,7 +159,7 @@ export default function VercelConfigModal({ isOpen, onClose }: VercelConfigModal
         {/* Footer */}
         <div className="border-t border-slate-100 pt-4 flex items-center justify-between">
           <div className="flex items-center gap-1.5 text-[11px] text-slate-500">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#15803d]" />
+            <ShieldCheck className="w-3.5 h-3.5 text-[#4F46E5]" />
             <span>Ready for Vercel, Netlify, Cloudflare Pages &amp; Cloud Run</span>
           </div>
           <button

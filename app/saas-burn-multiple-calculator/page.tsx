@@ -21,9 +21,9 @@ export default function BurnMultipleCalculatorPage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1 w-full">
         <nav className="flex items-center gap-1.5 text-xs text-slate-500">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-indigo-600">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#15803d] font-bold">Burn Multiple Calculator</span>
+          <span className="text-[#4F46E5] font-bold">Burn Multiple Calculator</span>
         </nav>
 
         <div className="space-y-2 border-b border-slate-200 pb-5">
@@ -42,7 +42,7 @@ export default function BurnMultipleCalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="net-burn">Net Cash Burn in Period ($)</label>
-                <span className="font-mono text-[#15803d]">${netBurn.toLocaleString()}</span>
+                <span className="font-mono text-[#4F46E5]">${netBurn.toLocaleString()}</span>
               </div>
               <input
                 id="net-burn"
@@ -52,7 +52,7 @@ export default function BurnMultipleCalculatorPage() {
                 step={10000}
                 value={netBurn}
                 onChange={(e) => setNetBurn(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
               <p className="text-[11px] text-slate-500">Cash burned over the quarter or year (Cash In minus Cash Out).</p>
             </div>
@@ -60,7 +60,7 @@ export default function BurnMultipleCalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="net-new-arr">Net New ARR Generated ($)</label>
-                <span className="font-mono text-[#15803d]">${netNewArr.toLocaleString()}</span>
+                <span className="font-mono text-[#4F46E5]">${netNewArr.toLocaleString()}</span>
               </div>
               <input
                 id="net-new-arr"
@@ -70,7 +70,7 @@ export default function BurnMultipleCalculatorPage() {
                 step={10000}
                 value={netNewArr}
                 onChange={(e) => setNetNewArr(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
               <p className="text-[11px] text-slate-500">Net new ARR added in the same period (New ARR + Expansion - Churn).</p>
             </div>
@@ -78,7 +78,7 @@ export default function BurnMultipleCalculatorPage() {
 
           <div className="lg:col-span-6 space-y-6">
             <div className={`border rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs ${
-              burnMultiple <= 1.0 ? 'bg-[#eef8ed] border-[#d2edd0]' : burnMultiple <= 1.5 ? 'bg-blue-50 border-blue-200' : 'bg-rose-50 border-rose-200'
+              burnMultiple <= 1.0 ? 'bg-[#EEF2FF] border-[#E0E7FF]' : burnMultiple <= 1.5 ? 'bg-blue-50 border-blue-200' : 'bg-rose-50 border-rose-200'
             }`}>
               <div className="space-y-1 border-b border-slate-200 pb-4">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-700">Burn Multiple</div>

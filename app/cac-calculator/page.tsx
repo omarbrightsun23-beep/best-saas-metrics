@@ -35,9 +35,9 @@ export default function CacCalculatorPage() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1 w-full">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1.5 text-xs text-slate-500">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-indigo-600">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-[#15803d] font-bold">CAC Calculator</span>
+          <span className="text-[#4F46E5] font-bold">CAC Calculator</span>
         </nav>
 
         {/* Title */}
@@ -70,7 +70,7 @@ export default function CacCalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="sales-spend">Sales Salaries &amp; Commissions ($)</label>
-                <span className="font-mono text-[#15803d]">${salesSpend.toLocaleString()}</span>
+                <span className="font-mono text-[#4F46E5]">${salesSpend.toLocaleString()}</span>
               </div>
               <input
                 id="sales-spend"
@@ -80,7 +80,7 @@ export default function CacCalculatorPage() {
                 step={1000}
                 value={salesSpend}
                 onChange={(e) => setSalesSpend(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
               <p className="text-[11px] text-slate-500">AE, SDR, and sales management compensation allocated to new logos.</p>
             </div>
@@ -89,7 +89,7 @@ export default function CacCalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="marketing-spend">Marketing Ad Spend &amp; Programs ($)</label>
-                <span className="font-mono text-[#15803d]">${marketingSpend.toLocaleString()}</span>
+                <span className="font-mono text-[#4F46E5]">${marketingSpend.toLocaleString()}</span>
               </div>
               <input
                 id="marketing-spend"
@@ -99,7 +99,7 @@ export default function CacCalculatorPage() {
                 step={1000}
                 value={marketingSpend}
                 onChange={(e) => setMarketingSpend(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
               <p className="text-[11px] text-slate-500">Google Ads, LinkedIn, content marketing, SEO agencies, sponsorships.</p>
             </div>
@@ -108,7 +108,7 @@ export default function CacCalculatorPage() {
             <div className="space-y-1.5">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="tools-spend">Sales &amp; Marketing Software Licenses ($)</label>
-                <span className="font-mono text-[#15803d]">${toolsSpend.toLocaleString()}</span>
+                <span className="font-mono text-[#4F46E5]">${toolsSpend.toLocaleString()}</span>
               </div>
               <input
                 id="tools-spend"
@@ -118,7 +118,7 @@ export default function CacCalculatorPage() {
                 step={500}
                 value={toolsSpend}
                 onChange={(e) => setToolsSpend(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
               <p className="text-[11px] text-slate-500">HubSpot, Salesforce, ZoomInfo, Apollo, Gong subscriptions.</p>
             </div>
@@ -127,7 +127,7 @@ export default function CacCalculatorPage() {
             <div className="space-y-1.5 pt-2 border-t border-slate-100">
               <div className="flex justify-between text-xs font-bold text-slate-800">
                 <label htmlFor="cust-acquired">New Paying Customers Acquired</label>
-                <span className="font-mono text-emerald-950 font-bold">{customersAcquired} Logos</span>
+                <span className="font-mono text-indigo-950 font-bold">{customersAcquired} Logos</span>
               </div>
               <input
                 id="cust-acquired"
@@ -137,7 +137,7 @@ export default function CacCalculatorPage() {
                 step={1}
                 value={customersAcquired}
                 onChange={(e) => setCustomersAcquired(Number(e.target.value))}
-                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#15803d]"
+                className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-[#4F46E5]"
               />
               <p className="text-[11px] text-slate-500">Total new logo conversions signed during this measured period.</p>
             </div>
@@ -145,8 +145,8 @@ export default function CacCalculatorPage() {
 
           {/* Results Pane */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="bg-[#eef8ed] border border-[#d2edd0] rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs">
-              <div className="space-y-1 border-b border-[#d2edd0]/80 pb-4">
+            <div className="bg-[#EEF2FF] border border-[#E0E7FF] rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs">
+              <div className="space-y-1 border-b border-[#E0E7FF]/80 pb-4">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-700">Fully Loaded CAC</div>
                 <div className="text-4xl sm:text-5xl font-black text-slate-950 font-mono">
                   ${fullyLoadedCac.toLocaleString()}{' '}
@@ -172,10 +172,10 @@ export default function CacCalculatorPage() {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-[#d2edd0]/80">
+              <div className="pt-3 border-t border-[#E0E7FF]/80">
                 <Link
                   href="/"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#15803d] hover:bg-[#166534] text-white text-xs font-bold transition shadow-xs"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#4F46E5] hover:bg-[#4338CA] text-white text-xs font-bold transition shadow-xs"
                 >
                   <span>Model Payback Period with This CAC</span>
                   <ArrowRight className="w-3.5 h-3.5" />
