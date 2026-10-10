@@ -56,6 +56,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    // SaaS Benchmarks 2026 hub
+    {
+      url: `${baseUrl}/saas-benchmarks`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
   ];
 
   const dynamicRoutes: MetadataRoute.Sitemap = SUB_NICHES.map((niche) => ({
