@@ -5,7 +5,7 @@ import { SUB_NICHES } from '@/src/data/niches';
 export const metadata: Metadata = {
   title: 'Best SaaS Metrics | B2B SaaS CAC Payback Period & Unit Economics Calculator',
   description:
-    'Institutional-grade B2B SaaS unit economics calculator. Compute true gross margin-adjusted CAC payback periods, LTV:CAC ratios, and 36-month cashflow breakeven trajectories across 8 industry cohorts.',
+    'Free B2B SaaS unit economics calculator. Compute gross margin-adjusted CAC payback, LTV:CAC ratios and 36-month breakeven trajectories.',
   alternates: {
     canonical: 'https://bestsaasmetrics.com/',
   },
@@ -61,6 +61,18 @@ export default function HomePage() {
           'Executive PDF & Board Summary Presentation Export',
         ],
       },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://bestsaasmetrics.com/#faq',
+        mainEntity: SUB_NICHES[0].faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      },
     ],
   };
 
@@ -70,7 +82,12 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
       />
-      <SaaSCalculator initialNicheSlug={defaultNiche.slug} isNextRouter={true} />
+      <SaaSCalculator
+        initialNicheSlug={defaultNiche.slug}
+        isNextRouter={true}
+        heroHeadline="SaaS CAC payback period"
+        heroHeadlineAccent="& unit economics calculator"
+      />
     </>
   );
 }

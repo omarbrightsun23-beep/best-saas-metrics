@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: '%s | Best SaaS Metrics',
   },
   description:
-    'Institutional-grade B2B SaaS unit economics calculator. Compute true gross margin-adjusted CAC payback periods, LTV:CAC ratios, and 36-month capital trajectories across 8 industry cohorts.',
+    'Free B2B SaaS unit economics calculator. Compute CAC payback periods, LTV:CAC ratios and 36-month cashflow trajectories across 8 industry benchmarks.',
   keywords: [
     'Best SaaS Metrics',
     'CAC payback period calculator',
@@ -29,9 +29,6 @@ export const metadata: Metadata = {
   authors: [{ name: 'Best SaaS Metrics Quantitative Research' }],
   creator: 'Best SaaS Metrics',
   publisher: 'Best SaaS Metrics Quantitative Research',
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -42,7 +39,7 @@ export const metadata: Metadata = {
       'Calculate gross margin-adjusted CAC payback period, customer lifetime value, and capital efficiency with 8 industry benchmark cohorts.',
     images: [
       {
-        url: 'https://bestsaasmetrics.com/og-image.svg',
+        url: 'https://bestsaasmetrics.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Best SaaS Metrics — Unit Economics & Benchmarks',
@@ -54,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Best SaaS Metrics | B2B SaaS CAC Payback & Unit Economics',
     description:
       'Calculate gross margin-adjusted CAC payback period, customer lifetime value, and capital efficiency with 8 industry benchmark cohorts.',
-    images: ['https://bestsaasmetrics.com/og-image.svg'],
+    images: ['https://bestsaasmetrics.com/og-image.png'],
   },
   icons: {
     icon: [

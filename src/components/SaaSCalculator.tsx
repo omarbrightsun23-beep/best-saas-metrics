@@ -22,11 +22,15 @@ import SemanticFormulasAndGlossary from './SemanticFormulasAndGlossary';
 interface SaaSCalculatorProps {
   initialNicheSlug?: string;
   isNextRouter?: boolean;
+  heroHeadline?: string;
+  heroHeadlineAccent?: string;
 }
 
 export default function SaaSCalculator({
   initialNicheSlug,
   isNextRouter = false,
+  heroHeadline,
+  heroHeadlineAccent,
 }: SaaSCalculatorProps) {
   // 1. Initial State Resolution
   const [selectedNiche, setSelectedNiche] = useState<SubNicheData>(() => {
@@ -193,7 +197,12 @@ export default function SaaSCalculator({
 
 
       {/* Hero Section */}
-      <HeroSection selectedNiche={selectedNiche} onSelectNiche={handleSelectNiche} />
+      <HeroSection
+        selectedNiche={selectedNiche}
+        onSelectNiche={handleSelectNiche}
+        headline={heroHeadline}
+        headlineAccent={heroHeadlineAccent}
+      />
 
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-5 space-y-4 sm:space-y-6 flex-1 w-full">

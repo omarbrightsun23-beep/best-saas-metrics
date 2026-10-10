@@ -15,9 +15,16 @@ import { SUB_NICHES } from '../data/niches';
 interface HeroSectionProps {
   selectedNiche: SubNicheData;
   onSelectNiche: (niche: SubNicheData) => void;
+  headline?: string;
+  headlineAccent?: string;
 }
 
-export default function HeroSection({ selectedNiche, onSelectNiche }: HeroSectionProps) {
+export default function HeroSection({
+  selectedNiche,
+  onSelectNiche,
+  headline = 'Build better SaaS unit economics,',
+  headlineAccent = 'faster than ever',
+}: HeroSectionProps) {
   const scrollToCalculator = () => {
     const elem = document.getElementById('calculator-control-panel');
     if (elem) {
@@ -71,9 +78,9 @@ export default function HeroSection({ selectedNiche, onSelectNiche }: HeroSectio
 
           {/* Main Title with Gradient Accent */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.15] max-w-4xl mx-auto">
-            Build better SaaS unit economics,{' '}
+            {headline}{' '}
             <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
-              faster than ever
+              {headlineAccent}
             </span>
           </h1>
 

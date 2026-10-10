@@ -34,7 +34,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const title = `${niche.name} CAC Payback & LTV:CAC Calculator (2026) | Best SaaS Metrics`;
+  // Let the root layout's title template append "| Best SaaS Metrics" exactly once.
+  const title = `${niche.name} CAC Payback Calculator (2026)`;
   const description = niche.metaDescription;
   const canonicalUrl = `https://bestsaasmetrics.com/${niche.slug}`;
 
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: 'Best SaaS Metrics',
       images: [
         {
-          url: 'https://bestsaasmetrics.com/og-image.svg',
+          url: 'https://bestsaasmetrics.com/og-image.png',
           width: 1200,
           height: 630,
           alt: `${niche.name} SaaS Unit Economics & Benchmarks`,
@@ -71,7 +72,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://bestsaasmetrics.com/og-image.svg'],
+      images: ['https://bestsaasmetrics.com/og-image.png'],
     },
   };
 }
@@ -173,7 +174,12 @@ export default async function IndustryPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-      <SaaSCalculator initialNicheSlug={niche.slug} isNextRouter={true} />
+      <SaaSCalculator
+        initialNicheSlug={niche.slug}
+        isNextRouter={true}
+        heroHeadline={`${niche.name} unit economics,`}
+        heroHeadlineAccent="benchmarked for 2026."
+      />
     </>
   );
 }
