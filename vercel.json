@@ -1,4 +1,1 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs"
-}
+{"$schema":"https://openapi.vercel.sh/vercel.json","framework":"nextjs","redirects":[{"destination":"https://bestsaasmetrics.com/:path*","has":[{"type":"host","value":"www.bestsaasmetrics.com"}],"permanent":true,"source":"/:path*"}]}
