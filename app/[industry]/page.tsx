@@ -179,6 +179,7 @@ export default async function IndustryPage({ params }: PageProps) {
         isNextRouter={true}
         heroHeadline={`${niche.name} unit economics,`}
         heroHeadlineAccent="benchmarked for 2026."
+        showDeepDive
       />
     </>
   );

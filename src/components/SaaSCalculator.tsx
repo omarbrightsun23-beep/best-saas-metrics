@@ -10,6 +10,7 @@ import CalculatorControlPanel from './CalculatorControlPanel';
 import ResultsDashboard from './ResultsDashboard';
 import UtilityActions from './UtilityActions';
 import EditorialNicheContent from './EditorialNicheContent';
+import CohortDeepDive from './CohortDeepDive';
 import AuthorTrustBlock from './AuthorTrustBlock';
 import CitationSection from './CitationSection';
 import CompareScenarioModal from './CompareScenarioModal';
@@ -24,6 +25,7 @@ interface SaaSCalculatorProps {
   isNextRouter?: boolean;
   heroHeadline?: string;
   heroHeadlineAccent?: string;
+  showDeepDive?: boolean;
 }
 
 export default function SaaSCalculator({
@@ -31,6 +33,7 @@ export default function SaaSCalculator({
   isNextRouter = false,
   heroHeadline,
   heroHeadlineAccent,
+  showDeepDive = false,
 }: SaaSCalculatorProps) {
   // 1. Initial State Resolution
   const [selectedNiche, setSelectedNiche] = useState<SubNicheData>(() => {
@@ -242,6 +245,9 @@ export default function SaaSCalculator({
           metrics={metrics}
           onSelectNiche={handleSelectNiche}
         />
+
+        {/* Cohort deep-dive guides: cohort pages only, never the homepage */}
+        {showDeepDive && <CohortDeepDive slug={selectedNiche.slug} />}
 
         {/* Google AdSense Compliant Banner Slot */}
         <AdBannerSlot slotId="bottom-content-ad-slot" format="horizontal" />
