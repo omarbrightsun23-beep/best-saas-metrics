@@ -15,6 +15,14 @@ export const metadata: Metadata = {
       'Compute true gross margin-adjusted CAC payback periods, LTV:CAC ratios, and 36-month cashflow breakeven trajectories across 8 industry cohorts.',
     url: 'https://bestsaasmetrics.com/',
     type: 'website',
+    images: [
+      {
+        url: 'https://bestsaasmetrics.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Best SaaS Metrics — CAC Payback & Unit Economics Calculator',
+      },
+    ],
   },
 };
 
