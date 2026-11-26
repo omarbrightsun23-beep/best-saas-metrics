@@ -70,6 +70,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // CAC Payback Period Benchmarks guide
+    {
+      url: `${baseUrl}/cac-payback-period-benchmarks`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 
   const dynamicRoutes: MetadataRoute.Sitemap = SUB_NICHES.map((niche) => ({
