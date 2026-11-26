@@ -77,6 +77,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // How to Calculate Churn Rate guide
+    {
+      url: `${baseUrl}/how-to-calculate-churn-rate`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 
   const dynamicRoutes: MetadataRoute.Sitemap = SUB_NICHES.map((niche) => ({
