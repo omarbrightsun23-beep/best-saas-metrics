@@ -91,6 +91,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // CAC Payback 16 vs 24 Months guide
+    {
+      url: `${baseUrl}/cac-payback-16-vs-24-months`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 
   const dynamicRoutes: MetadataRoute.Sitemap = SUB_NICHES.map((niche) => ({
