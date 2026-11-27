@@ -84,6 +84,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // SaaS Churn Benchmarks by ARR Band and ACV guide
+    {
+      url: `${baseUrl}/saas-churn-benchmarks-by-arr-and-acv`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 
   const dynamicRoutes: MetadataRoute.Sitemap = SUB_NICHES.map((niche) => ({
